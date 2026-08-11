@@ -44,3 +44,4 @@
 .statement .statement-label,.statement .statement-copy{color:rgba(239,244,255,.62)}
 .statement h2{color:var(--signal-cream)}
 @media (max-width:640px){.site-header{height:68px}.site-header .mobile-nav{background:var(--signal);color:var(--signal-cream)}.hero--signal .hero-copy{padding-top:24vh}.hero--signal h1{font-size:clamp(3.2rem,15.5vw,5.2rem)}.hero--signal .hero-lede{max-width:20rem;font-size:.66rem}.hero--signal .hero-actions{gap:1rem}.hero--signal .text-link-light{font-size:.62rem}}
+@media (min-width:901px){.hero--signal{aspect-ratio:16 / 9;min-height:0;height:auto}.hero--signal .hero-copy{padding-top:17%;transform:none}.hero--signal .hero-video{object-position:center center}}
