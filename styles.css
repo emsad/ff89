@@ -45,3 +45,13 @@
 .statement h2{color:var(--signal-cream)}
 @media (max-width:640px){.site-header{height:68px}.site-header .mobile-nav{background:var(--signal);color:var(--signal-cream)}.hero--signal .hero-copy{padding-top:24vh}.hero--signal h1{font-size:clamp(3.2rem,15.5vw,5.2rem)}.hero--signal .hero-lede{max-width:20rem;font-size:.66rem}.hero--signal .hero-actions{gap:1rem}.hero--signal .text-link-light{font-size:.62rem}}
 @media (min-width:901px){.hero--signal{aspect-ratio:16 / 9;min-height:0;height:auto}.hero--signal .hero-copy{padding-top:17%;transform:none}.hero--signal .hero-video{object-position:center center}}
+
+/* Reference-led portfolio copy and centered hero system. */
+.hero--signal .hero-video__veil{background:linear-gradient(180deg,rgba(1,8,40,.64) 0%,rgba(1,8,40,.18) 30%,rgba(1,8,40,.26) 52%,rgba(1,8,40,.86) 77%,#010828 100%),linear-gradient(90deg,rgba(1,8,40,.28),transparent 60%)}
+.hero-tags{display:flex;justify-content:center;gap:.45rem;flex-wrap:wrap;margin-bottom:1.4rem}.hero-tags span{padding:.45rem .8rem;border:1px solid rgba(239,244,255,.17);border-radius:999px;background:rgba(239,244,255,.08);color:rgba(239,244,255,.78);font:500 .56rem var(--mono);letter-spacing:.04em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.hero--signal .kicker{margin-bottom:1.1rem;color:rgba(239,244,255,.5)}
+.hero--signal h1 .hero-title-muted{font-family:'Anton',Impact,sans-serif;color:rgba(239,244,255,.46);font-size:1em;letter-spacing:.005em;text-transform:uppercase;white-space:normal}
+.hero--signal h1 em{color:var(--signal-cream);font-size:.82em}
+.hero--signal .hero-lede{max-width:35rem;color:rgba(239,244,255,.66)}
+.hero-projects-anchor{position:absolute;left:clamp(1.25rem,6vw,7.5rem);right:clamp(1.25rem,6vw,7.5rem);bottom:clamp(1.6rem,4vw,3.5rem);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;color:rgba(239,244,255,.66);font:500 .6rem var(--mono);letter-spacing:.08em;text-transform:uppercase}.hero-projects-anchor i{height:1px;background:rgba(239,244,255,.22)}
+@media (max-width:640px){.hero-tags{margin-bottom:1rem}.hero-tags span{font-size:.5rem;padding:.38rem .62rem}.hero-projects-anchor{font-size:.5rem;gap:.6rem;bottom:1.4rem}.hero--signal .hero-lede{max-width:22rem}}
