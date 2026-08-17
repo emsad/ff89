@@ -3,125 +3,577 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Fabio Fregoni progetta siti web e identità visive per aziende e professionisti che vogliono farsi scegliere." />
-    <meta property="og:title" content="Fabio Fregoni — Web design e graphic design" />
-    <meta property="og:description" content="Siti web e identità visive pensati per essere chiari, riconoscibili e utili al business." />
+    <meta name="description" content="Web design e acquisizione clienti B2B per trasformare la presenza online in nuove opportunità commerciali." />
+    <meta property="og:title" content="Fabio Fregoni | Web design e acquisizione clienti B2B" />
+    <meta property="og:description" content="Siti web, landing page e sistemi di acquisizione per farti trovare, capire e scegliere dalle persone giuste." />
     <meta property="og:type" content="website" />
-    <meta property="theme-color" content="#010828" />
-    <title>Fabio Fregoni — Web design e graphic design</title>
+    <meta property="theme-color" content="#080808" />
+    <title>Fabio Fregoni | Web design e acquisizione clienti B2B</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Condiment&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260817-mobile-menu-6" />
+  <style>
+    /* Desktop refinement: keep tablet and mobile on their dedicated rules. */
+    @media (min-width: 901px) {
+      #services-title > strong {
+        display: block;
+        width: 650px;
+        max-width: none;
+      }
+
+      #servizi .service-panel h3 {
+        font-size: 66.2px;
+      }
+
+      .problem-flow .flow-step small {
+        font-size: 14.8px;
+      }
+
+      #servizi .service-panel .inline-link {
+        font-size: 18.8px;
+        padding: 12.92px 20px;
+      }
+    }
+  </style>
+</head>
+  <body data-page="home">
     <a class="skip-link" href="#contenuto">Vai al contenuto</a>
-    <header class="site-header" data-header>
-      <a class="wordmark" href="/" aria-label="Fabio Fregoni, home">FF<span>®</span></a>
-      <nav class="desktop-nav" aria-label="Navigazione principale">
-        <a href="#lavori">Lavori</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#metodo">Metodo</a>
-        <a href="#contatti" class="nav-cta">Parliamo <span aria-hidden="true">↗</span></a>
-      </nav>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu <span aria-hidden="true">+</span></button>
-      <nav id="mobile-nav" class="mobile-nav" aria-label="Navigazione mobile">
-        <a href="#lavori">Lavori</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#metodo">Metodo</a>
-        <a href="#contatti">Parliamo <span aria-hidden="true">↗</span></a>
-      </nav>
+
+    <header class="site-header site-header--mega">
+      <div class="home-mega-corner" data-home-mega>
+        <a class="home-mega-brand" href="index.html#contenuto" aria-label="Home">
+          <img src="assets/ff-logo-accent.svg" alt="" />
+        </a>
+        <div class="home-mega-panel" data-home-mega-panel>
+          <div class="home-mega-groups">
+            <section class="home-mega-group" aria-labelledby="home-menu-label">
+              <span class="home-mega-group-label" id="home-menu-label">Sezioni interne</span>
+              <nav class="home-mega-menu" aria-label="Sezioni interne della homepage">
+                <a class="home-mega-item" href="index.html#lavori">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.2"/></svg>
+                  <span>Progetti</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="index.html#metodo">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="5" cy="5" r="1.7"/><circle cx="19" cy="12" r="1.7"/><circle cx="5" cy="19" r="1.7"/><path d="M6.7 5h4a3 3 0 0 1 3 3v1a3 3 0 0 0 3 3h.6M17.3 12H14a3 3 0 0 0-3 3v1a3 3 0 0 1-3 3H6.7"/></svg>
+                  <span>Metodo</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="index.html#faq-title">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.7 9.2a2.4 2.4 0 1 1 4.2 1.6c-.9.9-1.9 1.1-1.9 2.4M12 16.7h.01"/></svg>
+                  <span>FAQ</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="index.html#contatti">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 6.5h14v9.7a2 2 0 0 1-2 2H9l-4 2.8V6.5Z"/><path d="M8 10h8M8 13h5"/></svg>
+                  <span>Contatti</span><b>↗</b>
+                </a>
+              </nav>
+            </section>
+
+            <section class="home-mega-group" aria-labelledby="site-pages-menu-label">
+              <span class="home-mega-group-label" id="site-pages-menu-label">Pagine</span>
+              <nav class="home-mega-menu" aria-label="Pagine del sito">
+                <a class="home-mega-item" href="servizi/">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5"/><rect x="3.5" y="7.5" width="17" height="12.5" rx="2"/><path d="M3.8 12h16.4M10 12v1.5h4V12"/></svg>
+                  <span>Servizi</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="servizi/web-design/">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M7 6.8h.01M10 6.8h.01M13 6.8h.01"/></svg>
+                  <span>Web design</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="servizi/acquisizione-b2b/">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16l-6.2 7v5.9L10 19.5V12z"/></svg>
+                  <span>Acquisizione B2B</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="casi-studio/">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4.5h14v15H5z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
+                  <span>Casi studio</span><b>↗</b>
+                </a>
+                <a class="home-mega-item" href="recensioni/">
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 4 2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7Z"/></svg>
+                  <span>Recensioni</span><b>↗</b>
+                </a>
+              </nav>
+            </section>
+          </div>
+
+          <div class="home-mega-socials" aria-label="Social">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/fabiofregoni" rel="noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5.1 8.4h3.2V19H5.1zM6.7 4.8a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM10.1 8.4h3.1v1.45c.85-1.08 2.05-1.78 3.72-1.78 3.28 0 4.98 2.08 4.98 5.9V19h-3.2v-4.55c0-1.64-.5-3.1-2.15-3.1-1.63 0-2.44 1.11-2.44 3.1V19h-3.2z"/></svg>
+            </a>
+            <a aria-label="WhatsApp" href="https://wa.me/393335387338" rel="noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 11.5a8 8 0 1 1-11.8 7L4 20l1.5-4.2a8 8 0 1 1 14.7-4.3Z"/><path d="M8.7 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.4-.2.6-.1l1.7.7c.3.2.4.3.4.5v.5c0 .3 0 .4-.4.7-.4.4-1.2.4-2 .1-1.1-.4-2.3-1.1-3.4-2.2-1.1-1.1-1.8-2.3-2.2-3.4-.3-.8-.1-1.6.1-2.1Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <button class="home-mega-toggle" type="button" data-home-mega-toggle aria-expanded="false" aria-label="Apri menu">
+          <span class="home-mega-burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
     </header>
 
     <main id="contenuto">
-      <section class="hero section-pad hero--signal">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1534791547706-7b575f59a17e?auto=format&fit=crop&w=2400&q=80" aria-hidden="true">
-          <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_045634_e1c98c76-1265-4f5c-882a-4276f2080894.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-video__veil" aria-hidden="true"></div>
-        <div class="hero-copy reveal">
-          <div class="hero-tags" aria-label="Competenze"><span>Web design</span><span>Graphic design</span><span>Brand systems</span></div>
-          <p class="kicker">Fabio Fregoni / Brescia, Italia</p>
-          <h1><span class="hero-title-muted">Pensiero audace,</span><br />design che <em>resta.</em></h1>
-          <p class="hero-lede">Progetto siti web e identità visive per aziende italiane che vogliono farsi capire, ricordare e scegliere.</p>
-          <div class="hero-actions">
-            <a class="button button-signal" href="#lavori">Vedi i progetti <span aria-hidden="true">↘</span></a>
-            <a class="text-link text-link-light" href="#contatti">Parliamo <span aria-hidden="true">↗</span></a>
+      <section class="hero hero--refined" aria-labelledby="hero-title">
+        <div class="refined-stage">
+          <div class="refined-copy reveal">
+            <img class="refined-hero-logo" src="assets/ff-logo-accent.svg" alt="Logo Fabio Fregoni" />
+            <div class="refined-ticker" aria-label="Competenze principali">
+              <div class="refined-ticker__track">
+                <span>Web design</span><span>Lead generation B2B</span><span>LinkedIn outreach</span>
+                <span aria-hidden="true">Web design</span><span aria-hidden="true">Lead generation B2B</span><span aria-hidden="true">LinkedIn outreach</span>
+              </div>
+            </div>
+            <h1 id="hero-title">
+              <span class="title-line bright-word">Trasforma</span>
+              <span class="title-line accent-word">la tua presenza</span>
+              <span class="title-line bright-word">in un'opportunità</span>
+            </h1>
+            <p class="refined-subtitle">Siti web e sistemi di acquisizione B2B per portarti davanti alle persone giuste e trasformare l’interesse in conversazioni commerciali.</p>
+          <div class="refined-actions">
+              <a class="refined-button" href="#lavori">
+                Scopri i progetti
+                <svg class="refined-button__icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+              </a>
+              <a class="refined-button refined-button--ghost" href="#contatti">
+                Parliamo del tuo obiettivo
+                <svg class="refined-button__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M9 9h6M9 12h4"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <a class="hero-scroll" href="#lavori" aria-label="Scorri per esplorare i progetti">
+            <span class="hero-scroll__label">Scorri per esplorare</span>
+            <span class="hero-scroll__track" aria-hidden="true"><span></span></span>
+          </a>
+
+          <figure class="refined-portrait">
+            <img src="assets/fabio-hero.png" alt="Fabio Fregoni, web designer e consulente per l’acquisizione clienti B2B" fetchpriority="high" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="problem section-shell section-space" aria-labelledby="problem-title">
+        <div class="problem-intro reveal">
+          <p class="eyebrow">Il punto di partenza</p>
+          <h2 id="problem-title"><span>Non basta attirare attenzione.</span><strong>Devi trasformarla in opportunità.</strong></h2>
+          <p>Un sito senza traffico resta invisibile. Il traffico senza una presenza chiara si disperde. Il lavoro utile è farli funzionare insieme.</p>
+        </div>
+        <figure class="problem-support reveal reveal-delay" aria-hidden="true"><img src="assets/problem-standout-figure-v2.png" alt="" loading="lazy" /></figure>
+
+        <figure class="problem-flow" aria-labelledby="problem-flow-caption">
+          <div class="problem-flow__line" aria-hidden="true"></div>
+          <article class="flow-step reveal">
+            <span class="flow-step__number">01</span>
+            <div class="flow-step__symbol" aria-hidden="true"><img src="https://api.iconify.design/tabler:target-arrow.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Fatti trovare</p>
+              <span>Raggiungiamo aziende e persone che hanno un motivo concreto per ascoltarti.</span>
+            </div>
+            <small>Outreach · Email · LinkedIn</small>
+          </article>
+          <article class="flow-step reveal reveal-delay">
+            <span class="flow-step__number">02</span>
+            <div class="flow-step__symbol" aria-hidden="true"><img src="https://api.iconify.design/tabler:file-description.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Fatti capire</p>
+              <span>Un sito o una landing rendono immediati valore, differenza e prossimo passo.</span>
+            </div>
+            <small>Web design · Landing page · Shopify</small>
+          </article>
+          <article class="flow-step flow-step--outcome reveal reveal-delay-2">
+            <span class="flow-step__number">03</span>
+            <div class="flow-step__symbol flow-step__symbol--accent" aria-hidden="true"><img src="https://api.iconify.design/tabler:circle-check.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Fatti scegliere</p>
+              <span>Il contatto sa cosa fare, perché farlo e arriva alla conversazione con più consapevolezza.</span>
+            </div>
+            <small>Conversione · Qualifica · Conversazione</small>
+          </article>
+          <figcaption id="problem-flow-caption">Tre momenti diversi. Un unico sistema pensato per non perdere attenzione lungo la strada.</figcaption>
+        </figure>
+      </section>
+
+      <section id="servizi" class="services section-shell section-space" aria-labelledby="services-title">
+        <div class="services-lead">
+          <header class="section-intro reveal">
+            <p class="eyebrow">Un unico sistema</p>
+            <h2 id="services-title"><span>Due leve,</span><strong><span>un solo obiettivo.</span><br>Creare nuove<br>opportunità.</strong></h2>
+          </header>
+          <figure class="services-visual reveal reveal-delay" aria-hidden="true">
+            <img src="assets/service-pawn.webp" alt="" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="service-pair">
+          <article class="service-panel service-panel--web reveal">
+            <ul aria-label="Servizi di web design">
+              <li>Siti aziendali</li>
+              <li>Landing page</li>
+              <li>Ecommerce Shopify</li>
+            </ul>
+            <h3>Trasforma l’interesse in fiducia.</h3>
+            <p>Siti aziendali, landing page ed ecommerce Shopify che rendono chiaro il tuo valore, riducono i dubbi e accompagnano le persone al prossimo passo.</p>
+            <a class="inline-link" href="servizi/web-design/">Scopri il web design <svg class="service-link-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M7 6.8h.01M10 6.8h.01M13 6.8h.01"/></svg></a>
+          </article>
+
+          <article class="service-panel service-panel--growth reveal reveal-delay">
+            <ul aria-label="Servizi di acquisizione B2B">
+              <li>LinkedIn outreach</li>
+              <li>Email outreach</li>
+              <li>Prequalifica telefonica</li>
+            </ul>
+            <h3>Porta il tuo messaggio alle persone giuste.</h3>
+            <p>Targeting, outreach e prequalifica per concentrare tempo e attenzione sulle conversazioni con un reale potenziale commerciale.</p>
+            <a class="inline-link" href="servizi/acquisizione-b2b/">Scopri l’acquisizione B2B <svg class="service-link-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 6.5h14v10H9l-4 3v-13Z"/><path d="M8 10h8M8 13h5"/></svg></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="benefits section-shell section-space" aria-labelledby="benefits-title">
+        <div class="benefits-lead">
+          <header class="section-intro reveal">
+            <p class="eyebrow">Cosa cambia</p>
+            <h2 id="benefits-title"><span>Quando tutto</span><strong><span>lavora</span> nella stessa direzione.</strong></h2>
+            <p>Un percorso leggibile dal primo contatto alla richiesta commerciale: meno dispersione, più occasioni concrete.</p>
+          </header>
+          <figure class="benefits-visual reveal reveal-delay" aria-hidden="true">
+            <img src="assets/benefits-compass.png" alt="" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="benefit-list" aria-label="Vantaggi del sistema">
+          <article class="benefit reveal"><span>01</span><div><h3>Ti fai capire in pochi secondi.</h3><p>Chi arriva sul sito comprende cosa offri, per chi è utile e perché dovrebbe approfondire.</p></div><b aria-hidden="true">→</b></article>
+          <article class="benefit reveal reveal-delay"><span>02</span><div><h3>Dipendi meno dal passaparola.</h3><p>L’acquisizione diventa un processo continuativo, osservabile e migliorabile nel tempo.</p></div><b aria-hidden="true">→</b></article>
+          <article class="benefit reveal reveal-delay-2"><span>03</span><div><h3>Parli con contatti più qualificati.</h3><p>Targeting, verifica e prequalifica riducono le conversazioni inutili e aumentano quelle che meritano attenzione.</p></div><b aria-hidden="true">→</b></article>
+        </div>
+      </section>
+
+      <section id="lavori" class="work section-shell section-space" aria-labelledby="work-title">
+        <div class="work-lead">
+          <header class="section-intro reveal">
+            <p class="eyebrow">Progetti selezionati</p>
+            <h2 id="work-title">Non semplici siti da guardare. <span>Problemi da risolvere.</span></h2>
+            <p>Ogni progetto nasce da un obiettivo concreto: rendere più chiaro il valore, più semplice il percorso e più utile il contatto.</p>
+          </header>
+
+          <figure class="work-visual reveal reveal-delay">
+            <img src="assets/section-5-puzzle.webp" alt="Un pezzo di puzzle verde luminoso che completa un sistema" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-carousel reveal" data-case-carousel aria-label="Casi studio selezionati">
+          <div class="case-carousel__viewport">
+            <div class="case-carousel__track">
+              <article class="case-card case-card--acquisition" data-case-card>
+                <div class="case-card__content">
+                  <span class="case-card__category">Acquisizione clienti</span>
+                  <h3>Porta il messaggio alle persone giuste.</h3>
+                  <div class="case-card__meta">
+                    <p>Targeting, outreach e prequalifica per costruire conversazioni commerciali.</p>
+                    <a class="case-card__button" href="casi-studio/#acquisizione-clienti" aria-label="Leggi il caso studio sull'acquisizione clienti"><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+              <article class="case-card case-card--ecommerce" data-case-card>
+                <div class="case-card__content">
+                  <span class="case-card__category">Ecommerce</span>
+                  <h3>Acquista senza passaggi inutili.</h3>
+                  <div class="case-card__meta">
+                    <p>Struttura, contenuti e UX per accompagnare il cliente fino alla scelta.</p>
+                    <a class="case-card__button" href="casi-studio/#ecommerce" aria-label="Leggi il caso studio ecommerce"><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+              <article class="case-card case-card--landing" data-case-card>
+                <div class="case-card__content">
+                  <span class="case-card__category">Landing page</span>
+                  <h3>Dal primo impatto al prossimo passo.</h3>
+                  <div class="case-card__meta">
+                    <p>Una pagina focalizzata per rendere chiaro il valore e facilitare la conversione.</p>
+                    <a class="case-card__button" href="casi-studio/#landing-page" aria-label="Leggi il caso studio sulla landing page"><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+              <article class="case-card case-card--website" data-case-card>
+                <div class="case-card__content">
+                  <span class="case-card__category">Sito aziendale</span>
+                  <h3>Rendi chiaro ciò che offri.</h3>
+                  <div class="case-card__meta">
+                    <p>Un percorso più leggibile per trasformare attenzione in fiducia.</p>
+                    <a class="case-card__button" href="casi-studio/#sito-aziendale" aria-label="Leggi il caso studio sul sito aziendale"><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-        <div class="hero-projects-anchor"><span>Progetti</span><i></i><span>Selezionati / 2026</span></div>
-      </section>
 
-      <section class="statement section-pad section-rule reveal">
-        <p class="statement-label">Il punto di partenza</p>
-        <h2>Non serve aggiungere rumore.<br /><span>Serve togliere il superfluo.</span></h2>
-        <p class="statement-copy">Un buon progetto rende chiaro il valore che già esiste. Io lavoro tra strategia, forma e contenuto per trasformare una presenza online dispersiva in un sistema riconoscibile.</p>
-      </section>
-
-      <section id="lavori" class="work section-pad section-rule">
-        <div class="section-heading reveal">
-          <p class="section-index">01 / Selected work</p>
-          <h2>Progetti con un<br /><em>punto di vista.</em></h2>
-          <a class="text-link" href="#contatti">Parliamo del tuo progetto <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="work-grid">
-          <article class="project project--wide reveal">
-            <a href="#contatti" class="project-visual project-visual--studio" aria-label="Apri il progetto Studio Brevi">
-              <span class="project-visual__meta">Brand identity / 2024</span>
-              <span class="project-visual__title">Studio<br /><i>Brevi</i></span>
-              <span class="project-visual__mark">SB</span>
-            </a>
-            <div class="project-caption"><h3>Studio Brevi</h3><p>Identità e touchpoint per uno studio che lavora sulla fiducia.</p><span>↗</span></div>
-          </article>
-          <article class="project project--offset reveal reveal-delay">
-            <a href="#contatti" class="project-visual project-visual--beard" aria-label="Apri il progetto The Beard Shower">
-              <span class="project-visual__meta">E-commerce / 2023</span>
-              <span class="project-visual__title">The<br /><i>Beard</i><br />Shower</span>
-              <span class="project-visual__circle"></span>
-            </a>
-            <div class="project-caption"><h3>The Beard Shower</h3><p>Un sistema visivo netto per una linea beauty indipendente.</p><span>↗</span></div>
-          </article>
-          <article class="project project--tall reveal">
-            <a href="#contatti" class="project-visual project-visual--catalogue" aria-label="Apri il progetto catalogo prodotto">
-              <span class="project-visual__meta">Editorial design / 2022</span>
-              <span class="project-visual__title">Materia<br /><i>prima.</i></span>
-              <span class="project-visual__lines"></span>
-            </a>
-            <div class="project-caption"><h3>Catalogo prodotto</h3><p>Un ritmo editoriale costruito per far capire e desiderare.</p><span>↗</span></div>
-          </article>
+        <div class="work-cta reveal">
+          <h3>Ogni lavoro parte da un problema diverso.</h3>
+          <a class="work-cta__button" href="casi-studio/">
+            <span class="work-cta__icon" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <span>Vai ai case study</span>
+          </a>
         </div>
       </section>
 
-      <section id="servizi" class="services section-pad section-rule">
-        <div class="section-heading reveal"><p class="section-index">02 / Cosa faccio</p><h2>Due discipline.<br /><em>Un solo criterio.</em></h2></div>
-        <div class="services-list">
-          <article class="service reveal"><span class="service-number">01</span><div><h3>Web design</h3><p>Strutture, interfacce e contenuti per siti che spiegano bene il valore dell’azienda e portano le persone al passo successivo.</p><a class="text-link" href="#contatti">Scopri il servizio <span aria-hidden="true">↗</span></a></div><span class="service-arrow" aria-hidden="true">↘</span></article>
-          <article class="service reveal"><span class="service-number">02</span><div><h3>Graphic design</h3><p>Identità visive e sistemi editoriali per aziende che vogliono essere riconoscibili in ogni punto di contatto.</p><a class="text-link" href="#contatti">Scopri il servizio <span aria-hidden="true">↗</span></a></div><span class="service-arrow" aria-hidden="true">↘</span></article>
+      <section id="metodo" class="method section-shell section-space" aria-labelledby="method-title">
+        <div class="method-lead">
+          <div class="method-intro reveal">
+            <p class="eyebrow">Dal primo contatto al risultato</p>
+            <h2 id="method-title">Un <span>percorso</span> chiaro, dall’<span>attenzione</span> alla <span>conversazione.</span></h2>
+            <p>Ogni fase prepara la successiva. Nessun canale viene attivato prima di aver chiarito target, messaggio e punto di conversione.</p>
+          </div>
+
+          <figure class="method-visual reveal reveal-delay">
+            <img src="assets/section-6-maze-v2.webp" alt="Un percorso luminoso che attraversa un labirinto scuro" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="method-flow-wrap reveal">
+          <div class="method-radial method-timeline">
+            <ol class="method-timeline__steps" aria-label="Fasi del metodo di lavoro">
+              <li class="method-timeline__step">
+                <span class="method-timeline__number">01</span>
+                <p class="method-timeline__label">Direzione</p>
+                <h4>Individuiamo chi vuoi raggiungere</h4>
+                <p>Definiamo cliente ideale, problema e ragioni per scegliere la tua proposta.</p>
+              </li>
+              <li class="method-timeline__step">
+                <span class="method-timeline__number">02</span>
+                <p class="method-timeline__label">Messaggio</p>
+                <h4>Rendiamo chiaro il tuo valore</h4>
+                <p>Costruiamo messaggi e contenuti riconoscibili, senza promesse generiche.</p>
+              </li>
+              <li class="method-timeline__step">
+                <span class="method-timeline__number">03</span>
+                <p class="method-timeline__label">Conversione</p>
+                <h4>Creiamo il punto di conversione</h4>
+                <p>Il sito o la landing trasformano attenzione e fiducia in un’azione concreta.</p>
+              </li>
+              <li class="method-timeline__step">
+                <span class="method-timeline__number">04</span>
+                <p class="method-timeline__label">Acquisizione</p>
+                <h4>Attiviamo l’acquisizione del cliente</h4>
+                <p>La proposta raggiunge le persone giuste attraverso i canali più adatti.</p>
+              </li>
+              <li class="method-timeline__step">
+                <span class="method-timeline__number">05</span>
+                <p class="method-timeline__label">Ottimizzazione</p>
+                <h4>Filtriamo e ottimizziamo ciclicamente</h4>
+                <p>Qualità dei contatti, risposte e conversioni guidano le ottimizzazioni.</p>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
 
-      <section id="metodo" class="method section-pad section-rule reveal">
-        <div class="method-intro"><p class="section-index">03 / Metodo</p><h2>Prima capiamo.<br /><em>Poi progettiamo.</em></h2></div>
-        <ol class="method-list">
-          <li><span>01</span><div><h3>Mettere a fuoco</h3><p>Obiettivi, pubblico, contesto. La chiarezza viene prima dello stile.</p></div></li>
-          <li><span>02</span><div><h3>Dare una direzione</h3><p>Costruiamo un linguaggio visivo che renda il brand riconoscibile.</p></div></li>
-          <li><span>03</span><div><h3>Portarlo nel mondo</h3><p>Progettiamo ogni dettaglio e lo consegniamo pronto per crescere.</p></div></li>
-        </ol>
+      <section id="linkedin" class="linkedin section-shell section-space reveal" aria-labelledby="linkedin-title" hidden>
+        <div class="linkedin-visual" aria-hidden="true">
+          <span>Target</span><span>Messaggio</span><span>Conversazione</span><span>Qualifica</span>
+        </div>
+        <div class="linkedin-copy">
+          <p class="eyebrow">LinkedIn outreach</p>
+          <h2 id="linkedin-title">Nuove conversazioni commerciali, senza diventare spam.</h2>
+          <p>Non serve aggiungere migliaia di contatti o inviare lo stesso messaggio a chiunque. Serve individuare le aziende corrette, raggiungere chi può decidere e iniziare conversazioni pertinenti.</p>
+          <a class="inline-link" href="#contatti">Scopri il servizio LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
 
-      <section class="about section-pad section-rule reveal">
-        <div class="about-image" aria-hidden="true"><span>FF</span></div>
-        <div class="about-copy"><p class="section-index">04 / Fabio Fregoni</p><h2>17 anni a fare spazio<br />alle idee <em>giuste.</em></h2><p>Lavoro tra web design e graphic design da oltre quindici anni. Mi interessa costruire cose belle, sì, ma soprattutto cose che aiutano un’azienda a farsi capire e ricordare.</p><a class="text-link" href="#contatti">Conosciamoci <span aria-hidden="true">↗</span></a></div>
+      <section class="about section-shell section-space" aria-labelledby="about-title" hidden>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Un referente unico</p>
+          <h2 id="about-title">Meno passaggi. Più responsabilità.</h2>
+          <p>Lavori direttamente con chi analizza il problema, definisce la direzione e segue la realizzazione. Meno dispersione, decisioni più rapide e una visione coerente dal primo confronto alla consegna.</p>
+          <p class="about-note" data-placeholder>Anni di esperienza da uniformare prima della pubblicazione.</p>
+          <a class="inline-link" href="#contatti">Scopri chi seguirà il progetto <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="about-portrait reveal reveal-delay"><img src="assets/fabio-hero.png" alt="Fabio Fregoni" loading="lazy" /></figure>
       </section>
 
-      <section id="contatti" class="contact section-pad reveal">
-        <p class="section-index">05 / Contatti</p><h2>Hai un progetto<br /><em>da mettere a fuoco?</em></h2>
-        <a class="contact-link" href="mailto:info@fabiofregoni.com">info@fabiofregoni.com <span aria-hidden="true">↗</span></a>
-        <div class="contact-meta"><span>Brescia / Italia</span><span>Disponibile per progetti selezionati</span><a href="https://www.linkedin.com" rel="noreferrer">LinkedIn ↗</a></div>
+      <section class="proof section-shell section-space" aria-labelledby="proof-title">
+        <div class="proof-lead work-lead">
+          <header class="section-intro reveal">
+            <p class="eyebrow">Esperienze reali</p>
+            <h2 id="proof-title">Il valore si vede <span>anche da chi lo racconta.</span></h2>
+            <p>Una raccolta di feedback reali, da chi ha trasformato un progetto in un risultato concreto.</p>
+          </header>
+
+          <figure class="proof-visual work-visual reveal reveal-delay">
+            <img src="assets/section-7-testimonials.webp" alt="Una citazione luminosa al centro di messaggi scuri" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="review-grid" aria-label="Recensioni e pensieri sul lavoro di Fabio">
+          <article class="review-card review-card--review review-card--review-a review-card--linkedin reveal">
+            <header class="review-card__header">
+              <div class="review-card__person">
+                <div class="review-card__avatar"><img src="assets/testimonial-alessandra-salimbene.jpg" alt="Foto di Alessandra Salimbene" loading="lazy" /></div>
+                <div><strong>Alessandra Salimbene</strong><small>Consulenza LinkedIn</small></div>
+              </div>
+              <span class="review-card__source review-card__source--linkedin" aria-label="LinkedIn">in</span>
+            </header>
+            <p class="review-card__quote">“L’analisi del profilo LinkedIn è stata un interessante e professionale momento di confronto, da cui ho tratto spunti molto utili.”</p>
+          </article>
+
+          <article class="review-card review-card--phrase review-card--phrase-a reveal">
+            <p>Più chiarezza. Più fiducia. Più possibilità di essere scelti.</p>
+          </article>
+          <article class="review-card review-card--phrase review-card--phrase-b reveal reveal-delay">
+            <p>La forma giusta rende il valore più facile da riconoscere.</p>
+          </article>
+
+          <article class="review-card review-card--phrase review-card--phrase-c reveal">
+            <p>Un designer che capisce il problema prima di disegnare la soluzione.</p>
+          </article>
+          <article class="review-card review-card--review review-card--review-b review-card--linkedin reveal reveal-delay">
+            <header class="review-card__header">
+              <div class="review-card__person">
+                <div class="review-card__avatar"><img src="assets/testimonial-riccardo-sirello.png" alt="Foto di Riccardo Sirello" loading="lazy" /></div>
+                <div><strong>Riccardo Sirello</strong><small>Sito web aziendale</small></div>
+              </div>
+              <span class="review-card__source review-card__source--linkedin" aria-label="LinkedIn">in</span>
+            </header>
+            <p class="review-card__quote">“Ha capito le esigenze del mio business e le ha trasformate in un sito web elegante, funzionale e semplice da usare.”</p>
+          </article>
+          <article class="review-card review-card--phrase review-card--phrase-d reveal reveal-delay-2">
+            <p>Ogni dettaglio ha un motivo.</p>
+          </article>
+
+          <article class="review-card review-card--phrase review-card--phrase-e reveal">
+            <p>Il bello è quando il progetto inizia a lavorare davvero per il business.</p>
+          </article>
+          <article class="review-card review-card--phrase review-card--phrase-f reveal reveal-delay">
+            <p>Dalla prima impressione al prossimo passo, senza confusione.</p>
+          </article>
+          <article class="review-card review-card--review review-card--review-c review-card--linkedin reveal reveal-delay-2">
+            <header class="review-card__header">
+              <div class="review-card__person">
+                <div class="review-card__avatar"><img src="assets/testimonial-carmelo-abate.jpg" alt="Foto di Carmelo Abate" loading="lazy" /></div>
+                <div><strong>Carmelo Abate</strong><small>Collaborazione professionale</small></div>
+              </div>
+              <span class="review-card__source review-card__source--linkedin" aria-label="LinkedIn">in</span>
+            </header>
+            <p class="review-card__quote">“Fabio è un super designer e in generale un ottimo professionista con cui collaborare.”</p>
+          </article>
+        </div>
+
+        <div class="work-cta proof-cta reveal">
+          <h3>Altre esperienze, altri punti di vista.</h3>
+          <a class="work-cta__button" href="recensioni/">
+            <span class="work-cta__icon work-cta__icon--quotes" aria-hidden="true">“</span>
+            <span>Leggi tutte le recensioni</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="insights section-shell section-space" aria-labelledby="insights-title">
+        <div class="insights-lead">
+          <header class="section-intro reveal">
+            <p class="eyebrow">Guide e risorse</p>
+            <h2 id="insights-title">Capire prima. <span>Investire meglio.</span></h2>
+            <p>Contenuti pratici per valutare siti, landing page e sistemi di acquisizione senza affidarti a tecnicismi o promesse facili.</p>
+          </header>
+          <figure class="insights-visual reveal reveal-delay">
+            <img src="assets/section-10-resources.webp" alt="Manuale scuro con risorse organizzate per orientarsi" loading="lazy" />
+          </figure>
+        </div>
+
+        <figure class="problem-flow insights-flow" aria-labelledby="insights-flow-caption">
+          <div class="problem-flow__line" aria-hidden="true"></div>
+          <article class="flow-step reveal">
+            <span class="flow-step__number">01</span>
+            <div class="flow-step__symbol" aria-hidden="true"><img src="https://api.iconify.design/tabler:layout-dashboard.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Quanto costa davvero un sito web professionale?</p>
+              <span>Costi, variabili e criteri per capire cosa stai davvero acquistando.</span>
+            </div>
+            <span class="insights-flow__link insights-flow__link--pending">Guida in preparazione</span>
+          </article>
+          <article class="flow-step reveal reveal-delay">
+            <span class="flow-step__number">02</span>
+            <div class="flow-step__symbol" aria-hidden="true"><img src="https://api.iconify.design/tabler:message-circle.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Come ottenere risposte senza fare spam.</p>
+              <span>Un approccio più pertinente per iniziare conversazioni con le persone giuste.</span>
+            </div>
+            <span class="insights-flow__link insights-flow__link--pending">Guida in preparazione</span>
+          </article>
+          <article class="flow-step flow-step--outcome reveal reveal-delay-2">
+            <span class="flow-step__number">03</span>
+            <div class="flow-step__symbol flow-step__symbol--accent" aria-hidden="true"><img src="https://api.iconify.design/tabler:adjustments-horizontal.svg?color=%23cae8bd" alt="" width="28" height="28" /></div>
+            <div class="flow-step__copy">
+              <p>Sito web o landing page: quale serve al tuo obiettivo?</p>
+              <span>Come scegliere il punto di conversione più adatto al risultato che vuoi ottenere.</span>
+            </div>
+            <span class="insights-flow__link insights-flow__link--pending">Guida in preparazione</span>
+          </article>
+          <figcaption id="insights-flow-caption">Risorse pratiche per scegliere con più chiarezza.</figcaption>
+        </figure>
+      </section>
+
+      <section class="faq section-shell section-space" aria-labelledby="faq-title">
+        <header class="section-intro reveal"><p class="eyebrow">Prima di iniziare</p><h2 id="faq-title">Domande che <span>vale la pena chiarire.</span></h2></header>
+        <div class="faq-list">
+          <details class="reveal"><summary>Posso richiedere soltanto il sito web?</summary><p>Sì. I due servizi possono lavorare insieme, ma non devono necessariamente partire nello stesso momento. Il progetto viene costruito intorno al problema reale, non a un pacchetto predefinito.</p></details>
+          <details class="reveal"><summary>È sempre necessario rifare il sito?</summary><p>No. Se la struttura attuale è valida possiamo intervenire su posizionamento, contenuti, esperienza o conversione senza ricostruire tutto.</p></details>
+          <details class="reveal"><summary>A chi è rivolta l’acquisizione clienti B2B?</summary><p>Ad aziende e professionisti con un’offerta chiara, un valore medio adeguato e la necessità di raggiungere figure decisionali specifiche.</p></details>
+          <details class="reveal"><summary>Come vengono selezionati i contatti?</summary><p>Partiamo da criteri concordati come settore, ruolo, dimensione aziendale e territorio. Processo e livello di verifica verranno dettagliati nella pagina dedicata.</p></details>
+          <details class="reveal"><summary>Puoi garantire un numero preciso di clienti?</summary><p>No. Possiamo costruire un processo misurabile, verificare la qualità delle opportunità e migliorarlo attraverso dati reali, ma non garantire decisioni prese da terzi.</p></details>
+          <details class="reveal"><summary>Lavori soltanto a Brescia?</summary><p>No. Brescia è il riferimento territoriale, ma progetti e campagne possono essere gestiti con aziende e professionisti in tutta Italia.</p></details>
+        </div>
+      </section>
+
+      <section id="contatti" class="contact section-shell section-space reveal" aria-labelledby="contact-title">
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Il prossimo passo</p>
+            <h2 id="contact-title">Partiamo da ciò che oggi ti sta <span>facendo perdere opportunità.</span></h2>
+            <p>Potrebbe essere il sito, il messaggio, la mancanza di traffico o l’assenza di un processo di acquisizione. Una prima conversazione serve a capire dove intervenire e se esistono le condizioni per costruire qualcosa di utile.</p>
+          </div>
+
+          <form class="contact-form" action="mailto:info@fabiofregoni.com" method="post" enctype="text/plain">
+            <label>
+              <span>Nome e cognome</span>
+              <input type="text" name="nome" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Raccontami il progetto</span>
+              <textarea name="messaggio" rows="4" required></textarea>
+            </label>
+            <button class="contact-form__button" type="submit">Invia il messaggio <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer"><span>© 2026 Fabio Fregoni</span><span>Web design / Graphic design</span><a href="#contenuto">Torna su ↑</a></footer>
-    <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="assets/ff-logo-black.svg" alt="Logo Fabio Fregoni" />
+          <div>
+            <strong>Fabio Fregoni</strong>
+            <address>Via Mazzini · 25020 Poncarale, Brescia</address>
+            <div class="site-footer__socials" aria-label="Social e contatti">
+              <a href="https://www.linkedin.com/in/fabiofregoni" rel="noreferrer">LinkedIn <span class="site-footer__social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.1 8.4h3.2V19H5.1zM6.7 4.8a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM10.1 8.4h3.1v1.45c.85-1.08 2.05-1.78 3.72-1.78 3.28 0 4.98 2.08 4.98 5.9V19h-3.2v-4.55c0-1.64-.5-3.1-2.15-3.1-1.63 0-2.44 1.11-2.44 3.1V19h-3.2z"/></svg></span></a>
+              <a href="https://wa.me/393335387338" rel="noreferrer">WhatsApp <span class="site-footer__social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2a8 8 0 1 1 14.7-4.3Z"/><path d="M8.7 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1.2.4-2 .1-1.1-.4-2.3-1.1-3.4-2.2-1.1-1.1-1.8-2.3-2.2-3.4-.3-.8-.1-1.6.1-2.1Z"/></svg></span></a>
+            </div>
+          </div>
+        </div>
+        <nav class="site-footer__nav" aria-label="Menu del footer">
+          <a href="#servizi">Servizi</a>
+          <a href="#lavori">Progetti</a>
+          <a href="#metodo">Metodo</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
+      </div>
+      <div class="site-footer__legal">© 2026. Tutti i diritti riservati. <span>P.IVA 04573400985</span></div>
+    </footer>
+
+    <script src="script.js?v=20260824-menu-auto-height"></script>
   </body>
 </html>
