@@ -801,6 +801,19 @@ p,li,blockquote,.lead,figcaption,small{text-wrap:pretty}
 /*RLINK*/a.rmore.rlink{text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}a.rmore.rlink::after{content:"→"!important;font-size:14px}/*RITOCCHI-GLOBALI · 20 nov*/
 /* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
 .marq span{padding-right:.08em;margin-right:-.08em}
+/* card impilabili troppo alte per lo schermo: scorrono normali (vedi step-fit.js) */
+.step-flow>.step{position:relative!important;top:auto!important;margin-bottom:14px}
+@media (max-width:860px){
+  .met .step .num{font-size:84px;line-height:74px;margin:22px 0 8px}
+  .met .step h3{font-size:32px;line-height:33px}
+  .met .step p{font-size:17px;line-height:24px}
+}
+/* home: riga servizi sotto il titolo */
+.hero .hsvc{font-size:15px;line-height:20px;font-weight:600;color:var(--ink);margin:14px 0 0;letter-spacing:-.005em}
+.hero .hsvc::before{content:"";display:inline-block;width:7px;height:7px;background:var(--grad,#ff5a00);margin:0 8px 1px 0;vertical-align:middle}
+@media (max-width:860px){.hero .hsvc{font-size:14px;text-align:center;margin:12px auto 0}}
+/* card impilabili su mobile: ogni card resta ferma e intera per un tratto prima che arrivi la successiva */
+@media (max-width:860px){:not(.step-flow)>.step:has(~ .step){margin-bottom:28vh}}
 
 }
 @media (min-width:861px){
@@ -2634,6 +2647,19 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
 /*RITOCCHI-GLOBALI · 20 nov*/
 /* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
 .marq span{padding-right:.08em;margin-right:-.08em}
+/* card impilabili troppo alte per lo schermo: scorrono normali (vedi step-fit.js) */
+.step-flow>.step{position:relative!important;top:auto!important;margin-bottom:14px}
+@media (max-width:860px){
+  .met .step .num{font-size:84px;line-height:74px;margin:22px 0 8px}
+  .met .step h3{font-size:32px;line-height:33px}
+  .met .step p{font-size:17px;line-height:24px}
+}
+/* home: riga servizi sotto il titolo */
+.hero .hsvc{font-size:15px;line-height:20px;font-weight:600;color:var(--ink);margin:14px 0 0;letter-spacing:-.005em}
+.hero .hsvc::before{content:"";display:inline-block;width:7px;height:7px;background:var(--grad,#ff5a00);margin:0 8px 1px 0;vertical-align:middle}
+@media (max-width:860px){.hero .hsvc{font-size:14px;text-align:center;margin:12px auto 0}}
+/* card impilabili su mobile: ogni card resta ferma e intera per un tratto prima che arrivi la successiva */
+@media (max-width:860px){:not(.step-flow)>.step:has(~ .step){margin-bottom:28vh}}
 
 }
 </style></head> <body class> <div id="v-d">
@@ -2690,12 +2716,12 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
         
         <section class="hero">
           <div class="hl" data-solo="d"><h1 class="kick"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1>
-          <h2 class="title">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2>
+          <h2 class="title">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="hsvc">Siti web, landing page e LinkedIn per PMI B2B a Brescia</p>
           <p class="lead">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p>
           <div class="btns">
             <a class="btn btn-p" href="/contatti/">Raccontami il tuo progetto <span>→</span></a>
             <a class="btn btn-d" href="/casi-studio/">Guarda i casi studio <span>→</span></a>
-          </div><div class="hfacts hproof"><div class="hp-n"><b>500+</b><span>progetti consegnati</span></div><a class="hp-rev" href="/recensioni/" aria-label="Leggi le recensioni"><span class="avs"><i><img src="/assets/b526033e7b5c.webp" alt="Giulio Bonotto"></i><i><img src="/assets/81c17424b78f.webp" alt="Referenza"></i><i><img src="/assets/24b1d4bfa325.webp" alt="Referenza"></i><i><img src="/assets/ce7f243e5ef5.webp" alt="Referenza"></i><i><img src="/assets/ccbd02a5ca0e.webp" alt="Referenza"></i></span><span class="hp-t"><span class="st">★★★★★</span><b>18 recensioni</b><small>Leggile tutte →</small></span></a></div></div><h1 class="kick" data-solo="m"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1><h2 class="title" data-solo="m">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="lead" data-solo="m">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p><div class="visual" data-visual>
+          </div><div class="hfacts hproof"><div class="hp-n"><b>500+</b><span>progetti consegnati</span></div><a class="hp-rev" href="/recensioni/" aria-label="Leggi le recensioni"><span class="avs"><i><img src="/assets/b526033e7b5c.webp" alt="Giulio Bonotto"></i><i><img src="/assets/81c17424b78f.webp" alt="Referenza"></i><i><img src="/assets/24b1d4bfa325.webp" alt="Referenza"></i><i><img src="/assets/ce7f243e5ef5.webp" alt="Referenza"></i><i><img src="/assets/ccbd02a5ca0e.webp" alt="Referenza"></i></span><span class="hp-t"><span class="st">★★★★★</span><b>18 recensioni</b><small>Leggile tutte →</small></span></a></div></div><h1 class="kick" data-solo="m"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1><h2 class="title" data-solo="m">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="hsvc" data-solo="m">Siti web, landing page e LinkedIn per PMI B2B a Brescia</p><p class="lead" data-solo="m">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p><div class="visual" data-visual>
             <div class="shapes back" aria-hidden="true"><span class="sh orange t-big"></span><span class="sh orange t-small"></span><span class="sh orange sq"></span><span class="sh ink"></span></div>
             <div class="photo-wrap"><img class="photo" src="/assets/89f87cc25d9a.webp" alt="Fabio Fregoni"></div>
           </div><div class="btns" data-solo="m">
@@ -2904,8 +2930,9 @@ document.querySelectorAll('.phone').forEach(phone=>{
     travel=Math.round(vh()*.75);                  // scroll dedicato all'effetto
     sticky.style.height=stickH+'px';
     sticky.style.top=(vh()-stickH)+'px';           // si blocca quando si vedono entrambi i bottoni
-    start=stickH-vh()+10;                          // piccola pausa prima di partire
-    scene.style.height=(stickH+travel+10)+'px';
+    const dw=stickH>vh()+5?Math.round(vh()*.32):0;  // hero più alta dello schermo: pausa con i bottoni interi
+    start=stickH-vh()+10+dw;
+    scene.style.height=(stickH+travel+10+dw)+'px';
     const s2el=sc.querySelector('.s2');s2el.style.marginTop=-Math.round(travel*.85)+'px';   // la sezione 2 sale mentre l'arancio si completa
     const s=sticky.getBoundingClientRect(),v=visual.getBoundingClientRect();
     front.style.top=(v.top-s.top)+'px';front.style.height=v.height+'px';
@@ -3111,12 +3138,12 @@ window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.ad
         
         <section class="hero">
           <div class="hl" data-solo="d"><h1 class="kick"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1>
-          <h2 class="title">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2>
+          <h2 class="title">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="hsvc">Siti web, landing page e LinkedIn per PMI B2B a Brescia</p>
           <p class="lead">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p>
           <div class="btns">
             <a class="btn btn-p" href="/contatti/">Raccontami il tuo progetto <span>→</span></a>
             <a class="btn btn-d" href="/casi-studio/">Guarda i casi studio <span>→</span></a>
-          </div><div class="hfacts hproof"><div class="hp-n"><b>500+</b><span>progetti consegnati</span></div><a class="hp-rev" href="/recensioni/" aria-label="Leggi le recensioni"><span class="avs"><i><img src="/assets/b526033e7b5c.webp" alt="Giulio Bonotto"></i><i><img src="/assets/81c17424b78f.webp" alt="Referenza"></i><i><img src="/assets/24b1d4bfa325.webp" alt="Referenza"></i><i><img src="/assets/ce7f243e5ef5.webp" alt="Referenza"></i><i><img src="/assets/ccbd02a5ca0e.webp" alt="Referenza"></i></span><span class="hp-t"><span class="st">★★★★★</span><b>18 recensioni</b><small>Leggile tutte →</small></span></a></div></div><h1 class="kick" data-solo="m"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1><h2 class="title" data-solo="m">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="lead" data-solo="m">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p><div class="visual" data-visual>
+          </div><div class="hfacts hproof"><div class="hp-n"><b>500+</b><span>progetti consegnati</span></div><a class="hp-rev" href="/recensioni/" aria-label="Leggi le recensioni"><span class="avs"><i><img src="/assets/b526033e7b5c.webp" alt="Giulio Bonotto"></i><i><img src="/assets/81c17424b78f.webp" alt="Referenza"></i><i><img src="/assets/24b1d4bfa325.webp" alt="Referenza"></i><i><img src="/assets/ce7f243e5ef5.webp" alt="Referenza"></i><i><img src="/assets/ccbd02a5ca0e.webp" alt="Referenza"></i></span><span class="hp-t"><span class="st">★★★★★</span><b>18 recensioni</b><small>Leggile tutte →</small></span></a></div></div><h1 class="kick" data-solo="m"><i></i>Fabio Fregoni · Web designer e direttore creativo a Brescia</h1><h2 class="title" data-solo="m">Quando l'AI rende tutti uguali, vince chi <span class="o">si differenzia.</span></h2><p class="hsvc" data-solo="m">Siti web, landing page e LinkedIn per PMI B2B a Brescia</p><p class="lead" data-solo="m">Aiuto PMI B2B e studi professionali a farsi scegliere: prima definiamo cosa ti rende diverso, poi lo costruisco in un sito, un brand e campagne che portano richieste.</p><div class="visual" data-visual>
             <div class="shapes back" aria-hidden="true"><span class="sh orange t-big"></span><span class="sh orange t-small"></span><span class="sh orange sq"></span><span class="sh ink"></span></div>
             <div class="photo-wrap"><img class="photo" src="/assets/89f87cc25d9a.webp" alt="Fabio Fregoni"></div>
           </div><div class="btns" data-solo="m">
@@ -3325,8 +3352,9 @@ document.querySelectorAll('.phone').forEach(phone=>{
     travel=Math.round(vh()*.75);                  // scroll dedicato all'effetto
     sticky.style.height=stickH+'px';
     sticky.style.top=(vh()-stickH)+'px';           // si blocca quando si vedono entrambi i bottoni
-    start=stickH-vh()+10;                          // piccola pausa prima di partire
-    scene.style.height=(stickH+travel+10)+'px';
+    const dw=stickH>vh()+5?Math.round(vh()*.32):0;  // hero più alta dello schermo: pausa con i bottoni interi
+    start=stickH-vh()+10+dw;
+    scene.style.height=(stickH+travel+10+dw)+'px';
     const s2el=sc.querySelector('.s2');s2el.style.marginTop=-Math.round(travel*.85)+'px';   // la sezione 2 sale mentre l'arancio si completa
     const s=sticky.getBoundingClientRect(),v=visual.getBoundingClientRect();
     front.style.top=(v.top-s.top)+'px';front.style.height=v.height+'px';
@@ -3453,6 +3481,24 @@ function fix(el){if(el.dataset.nw)return;var ws=words(el);if(!widow(ws))return;v
 function run(){var sc=document.querySelector('[data-screen]')||document.body;sc.querySelectorAll(SEL).forEach(function(el){if(el.closest('footer,.marq'))return;if(!el.offsetWidth)return;try{fix(el)}catch(e){}})}
 if(document.readyState!='loading')setTimeout(run,60);else document.addEventListener('DOMContentLoaded',function(){setTimeout(run,60)});
 window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(run,250)});
+})();
+</script><script>// Card impilabili (metodo, storia): su schermi bassi una card intera non sta nello schermo
+// e la successiva la copre prima che si veda l'animazione. In quel caso scorrono normali.
+(function(){
+  var groups=[];
+  document.querySelectorAll('.step').forEach(function(s){
+    var cs=getComputedStyle(s);if(cs.position!=='sticky')return;
+    s.dataset.top=parseFloat(cs.top)||0;
+    if(groups.indexOf(s.parentElement)<0)groups.push(s.parentElement);
+  });
+  function fit(){
+    var H=Math.min(innerHeight,(window.visualViewport&&visualViewport.height)||innerHeight);
+    groups.forEach(function(g){
+      var tooTall=[].some.call(g.querySelectorAll(':scope>.step'),function(s){return (+s.dataset.top||0)+s.offsetHeight>H-12});
+      g.classList.toggle('step-flow',tooTall);
+    });
+  }
+  fit();addEventListener('load',fit);addEventListener('orientationchange',function(){setTimeout(fit,300)});
 })();
 </script></template> <script>(function(){var B=document.body,d=matchMedia("(min-width:861px)").matches,v=document.getElementById("v-d");if(d){B.className=" desk";v.querySelectorAll("[data-solo=m]").forEach(function(e){e.remove()});v.querySelectorAll("script[data-run]").forEach(function(o){var n=document.createElement("script");n.text=o.text;o.replaceWith(n)})}else{v.remove();B.className="";var f=document.importNode(document.getElementById("v-m").content,true);f.querySelectorAll("[data-solo=d]").forEach(function(e){e.remove()});f.querySelectorAll("[data-mattrs]").forEach(function(e){var o=JSON.parse(e.getAttribute("data-mattrs"));for(var k in o){if(o[k]===null)e.removeAttribute(k);else e.setAttribute(k,o[k])}e.removeAttribute("data-mattrs")});B.appendChild(f)}matchMedia("(min-width:861px)").addEventListener("change",function(){location.reload()});if(!matchMedia("(prefers-reduced-motion: reduce)").matches)addEventListener("load",function(){dispatchEvent(new Event("resize"))})})();</script> <div id="ffc" class="ffc" role="dialog" aria-live="polite" aria-label="Preferenze cookie" aria-hidden="true">
   <p class="ffc-t">Cookie, solo se vuoi.</p>
