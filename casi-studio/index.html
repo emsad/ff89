@@ -1213,6 +1213,9 @@ body{background:#e9e9e6;font-family:var(--body);color:var(--ink);padding:32px 16
 .step.orange .dots i.on{background:#fff!important}
 /* niente parole sole a fine paragrafo */
 p,li,blockquote,.lead,figcaption,small{text-wrap:pretty}
+/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
 
 }
 @media (min-width:861px){
@@ -4369,6 +4372,27 @@ body.desk.pg-blog .bl-list{overflow:visible!important}
 .dnav .dd-p.ddx a.ddx-c:hover b{color:#fff!important}
 .dnav .ddx-s>a:not(.dd-all){background:#ffffff0d!important;border:1px solid #ffffff1a;border-radius:16px!important;padding:12px 14px!important}
 }
+
+/*DDX-2 · 20 nov: solo servizi 3x2, immagini centrate, hover sobrio*/
+@media (min-width:861px){
+.dnav .dd-p.ddx{width:min(1080px,calc(100vw - 2*var(--pad)));grid-template-columns:minmax(0,1fr);padding:14px}
+.ddx-g{gap:12px}
+.dnav .dd-p.ddx a.ddx-c{padding:10px 10px 18px!important;background:#f6f7f9!important;transition:opacity .35s,transform .35s var(--ease),background .25s,box-shadow .25s}
+.dnav .dd:hover .dd-p.ddx a.ddx-c,.dnav .dd:focus-within .dd-p.ddx a.ddx-c{transition-delay:calc(var(--i)*30ms),calc(var(--i)*30ms),0s,0s}
+.dnav .dd-p.ddx .ddx-im{display:flex!important;align-items:center;justify-content:center;height:190px;border-radius:14px;background:radial-gradient(70% 80% at 50% 60%,#ff751826,#ff751800 70%),#fff!important;transition:none}
+.dnav .dd-p.ddx .ddx-im img{display:block;width:auto;height:auto;max-height:172px;max-width:90%;margin:0 auto;object-fit:contain;transform:none;transition:transform .45s var(--ease)}
+.dnav .dd-p.ddx .ddx-t{padding:14px 8px 0}
+.dnav .dd-p.ddx .ddx-t b{font-size:17px!important}
+.dnav .dd-p.ddx .ddx-t span{font-size:13.5px;line-height:18px}
+.dnav .dd-p.ddx a.ddx-c:hover{background:#fff!important;color:var(--ink)!important;box-shadow:0 14px 34px #0d0f141a,inset 0 0 0 1px #0d0f140f}
+.dnav .dd-p.ddx a.ddx-c:hover b{color:var(--ink)!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-t span{color:var(--ink-2)}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im{background:radial-gradient(70% 80% at 50% 60%,#ff751833,#ff751800 70%),#fff!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:scale(1.04)}
+.dnav .dd-p.ddx .ddx-c>i{background:#fff}
+.dnav .dd-p.ddx a.ddx-c:hover>i{background:var(--grad);color:#fff;transform:translateX(2px)}
+@media (prefers-reduced-motion:reduce){.dnav .dd-p.ddx .ddx-im img{transition:none}.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:none}}
+}
 /*NAV-NARROW*/
 @media (min-width:861px) and (max-width:1240px){
 .dnav{gap:12px!important}
@@ -4387,13 +4411,16 @@ body.desk.pg-blog .bl-list{overflow:visible!important}
 @media (min-width:861px) and (max-width:980px){.desk section:not(.hero) .sec-head h2{zoom:.76}}
 @media (min-width:981px) and (max-width:1080px){.desk section:not(.hero) .sec-head h2{zoom:.84}}
 @media (min-width:1081px) and (max-width:1180px){.desk section:not(.hero) .sec-head h2{zoom:.92}}
+/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
 
 }
 </style></head> <body class="pg-casi-studio"> <div id="v-d">
 <div class="wrap">
 <div class="phone">
   <div class="scrim" data-scrim></div>
-  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div><div class="dd-s ddx-s"><small>Settori</small><a href="/settori/manifattura/"><b>Manifattura e B2B</b><span>Siti e comunicazione per chi produce</span></a><div class="ddx-help"><b>Non sai da dove partire?</b><span>Raccontami cosa non funziona: ti dico io da dove iniziare.</span><a href="/contatti/" class="ddx-cta">Raccontami il progetto <span>→</span></a></div><a href="/servizi/" class="dd-all">Tutti i servizi <span>→</span></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/" aria-current="page">Casi studio</a><a href="/chi-sono/">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="/contatti/">Raccontami il progetto <span>→</span></a></div>
+  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/" aria-current="page">Casi studio</a><a href="/chi-sono/">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="/contatti/">Raccontami il progetto <span>→</span></a></div>
   <div class="mega" data-mega>
     <button class="mega-toggle" type="button" data-mega-toggle aria-expanded="false" aria-label="Apri menu">
       <span class="lbl-open">Menu</span><span class="lbl-close">Chiudi</span>
@@ -4841,4 +4868,4 @@ if(box){
   else if(scelta!=='no')setTimeout(apri,600);
 }
 })();
-</script> </body> </html>
+</script>  </body> </html>

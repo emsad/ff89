@@ -798,7 +798,10 @@ p,li,blockquote,.lead,figcaption,small{text-wrap:pretty}
 
 /*KPI-CTX*/.case .kpi small{display:block;font:600 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#ffffffb3;-webkit-text-fill-color:#ffffffb3;margin-top:6px;background:none}
 /*PV*/.pv{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-top:22px}.pv-t{position:relative;border-radius:20px;padding:22px 18px 18px;text-align:left;display:flex;flex-direction:column;gap:6px}.pv-a{background:#f1f2f4;color:var(--ink)}.pv-b{background:var(--grad);color:#fff;box-shadow:0 18px 40px #f53d0055;animation:pvPop 3.2s ease-in-out infinite}.pv-k{font:600 10.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;opacity:.75}.pv-p{font:800 44px/1 var(--head);letter-spacing:-.04em}.pv-a .pv-p{position:relative;color:#0d0f1466;width:max-content}.pv-a .pv-p::after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:4px;border-radius:2px;background:#ff4d00;transform-origin:0 50%;animation:pvStrike 3.2s ease-in-out infinite}.pv-s{font-size:13px;line-height:18px;opacity:.85}.pv-x,.pv-ok{position:absolute;top:-11px;right:16px;box-shadow:0 8px 18px #0d0f1426;font:700 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 9px}.pv-x{background:#fff;color:#0d0f1499}.pv-ok{background:#fff;color:#ff4d00}.pv-vs{font:800 14px var(--head);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff}@keyframes pvStrike{0%,20%{transform:scaleX(0)}45%,100%{transform:scaleX(1)}}@keyframes pvPop{0%,40%{transform:scale(1)}55%{transform:scale(1.05) rotate(-1deg)}70%,100%{transform:scale(1)}}@media (prefers-reduced-motion:reduce){.pv-b,.pv-a .pv-p::after{animation:none}}@media (min-width:861px){.desk .pv{max-width:640px;margin:30px auto 0;gap:20px}.desk .pv-t{padding:26px 24px 22px}.desk .pv-p{font-size:58px}.desk .pv-s{font-size:15px;line-height:21px}}
-/*RLINK*/a.rmore.rlink{text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}a.rmore.rlink::after{content:"→"!important;font-size:14px}
+/*RLINK*/a.rmore.rlink{text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}a.rmore.rlink::after{content:"→"!important;font-size:14px}/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
+
 }
 @media (min-width:861px){
 
@@ -2577,6 +2580,27 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
 .dnav .dd-p.ddx a.ddx-c:hover b{color:#fff!important}
 .dnav .ddx-s>a:not(.dd-all){background:#ffffff0d!important;border:1px solid #ffffff1a;border-radius:16px!important;padding:12px 14px!important}
 }
+
+/*DDX-2 · 20 nov: solo servizi 3x2, immagini centrate, hover sobrio*/
+@media (min-width:861px){
+.dnav .dd-p.ddx{width:min(1080px,calc(100vw - 2*var(--pad)));grid-template-columns:minmax(0,1fr);padding:14px}
+.ddx-g{gap:12px}
+.dnav .dd-p.ddx a.ddx-c{padding:10px 10px 18px!important;background:#f6f7f9!important;transition:opacity .35s,transform .35s var(--ease),background .25s,box-shadow .25s}
+.dnav .dd:hover .dd-p.ddx a.ddx-c,.dnav .dd:focus-within .dd-p.ddx a.ddx-c{transition-delay:calc(var(--i)*30ms),calc(var(--i)*30ms),0s,0s}
+.dnav .dd-p.ddx .ddx-im{display:flex!important;align-items:center;justify-content:center;height:190px;border-radius:14px;background:radial-gradient(70% 80% at 50% 60%,#ff751826,#ff751800 70%),#fff!important;transition:none}
+.dnav .dd-p.ddx .ddx-im img{display:block;width:auto;height:auto;max-height:172px;max-width:90%;margin:0 auto;object-fit:contain;transform:none;transition:transform .45s var(--ease)}
+.dnav .dd-p.ddx .ddx-t{padding:14px 8px 0}
+.dnav .dd-p.ddx .ddx-t b{font-size:17px!important}
+.dnav .dd-p.ddx .ddx-t span{font-size:13.5px;line-height:18px}
+.dnav .dd-p.ddx a.ddx-c:hover{background:#fff!important;color:var(--ink)!important;box-shadow:0 14px 34px #0d0f141a,inset 0 0 0 1px #0d0f140f}
+.dnav .dd-p.ddx a.ddx-c:hover b{color:var(--ink)!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-t span{color:var(--ink-2)}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im{background:radial-gradient(70% 80% at 50% 60%,#ff751833,#ff751800 70%),#fff!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:scale(1.04)}
+.dnav .dd-p.ddx .ddx-c>i{background:#fff}
+.dnav .dd-p.ddx a.ddx-c:hover>i{background:var(--grad);color:#fff;transform:translateX(2px)}
+@media (prefers-reduced-motion:reduce){.dnav .dd-p.ddx .ddx-im img{transition:none}.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:none}}
+}
 /*NAV-NARROW*/
 @media (min-width:861px) and (max-width:1240px){
 .dnav{gap:12px!important}
@@ -2599,13 +2623,24 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
 .scene{overflow-x:clip}
 /*VID-NARROW*/
 @media (max-width:1180px){body.desk[class] #video .vid-more .pill{min-width:0!important;width:100%!important;justify-content:space-between}body.desk[class] #video .vid-more{width:100%}}
+/*RITOCCHI-HOME · 20 nov*/
+@media (min-width:861px){
+.desk .hero .title{max-width:none!important;font-size:58px!important;line-height:.98!important;text-wrap:balance}
+.desk .hero .title .o{white-space:nowrap}
+}
+@media (min-width:861px){
+.desk #casi.hs2 .hs-pin{height:auto!important;padding:0 0 10px!important;justify-content:flex-start!important}
+}
+/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
 
 }
 </style></head> <body class> <div id="v-d">
 <div class="wrap">
 <div class="phone">
   <div class="scrim" data-scrim></div>
-  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home on">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div><div class="dd-s ddx-s"><small>Settori</small><a href="/settori/manifattura/"><b>Manifattura e B2B</b><span>Siti e comunicazione per chi produce</span></a><div class="ddx-help"><b>Non sai da dove partire?</b><span>Raccontami cosa non funziona: ti dico io da dove iniziare.</span><a href="/contatti/" class="ddx-cta">Raccontami il progetto <span>→</span></a></div><a href="/servizi/" class="dd-all">Tutti i servizi <span>→</span></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/">Casi studio</a><a href="/chi-sono/">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="#contatti" data-go>Raccontami il progetto <span>→</span></a></div>
+  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home on">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/">Casi studio</a><a href="/chi-sono/">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="#contatti" data-go>Raccontami il progetto <span>→</span></a></div>
   <div class="mega" data-mega>
     <button class="mega-toggle" type="button" data-mega-toggle aria-expanded="false" aria-label="Apri menu">
       <span class="lbl-open">Menu</span><span class="lbl-close">Chiudi</span>
@@ -2671,7 +2706,7 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
           <figure class="review rv in">
             <span class="q" aria-hidden="true">“</span>
             <blockquote>Con Fabio si può parlare di business. Non si limita alla grafica: <em>ragiona, porta idee, fa domande giuste.</em></blockquote>
-            <a class="rmore rlink" href="/recensioni/#rec-ana-strainu">Leggi la recensione completa</a><figcaption class="who">
+            <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who">
               <span class="av" aria-hidden="true"><img src="/assets/ab3b735aadd5.jpg" alt=""></span>
               <span><b>Ana Strainu</b><small>Collaborazioni e progetti</small></span>
             </figcaption>
@@ -2750,7 +2785,7 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
           <div class="cap"><b>Giulio Bonotto racconta com'è lavorare con me</b></div>
         </div>
         <div class="vid-r"><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div><blockquote>«Collaborare con Fabio non significa semplicemente affidargli dei progetti da eseguire, significa <em>trovare un professionista con cui confrontarsi</em>, a cui poter comunicare i propri obiettivi e che si impegna concretamente per aiutare a raggiungerli.»</blockquote>
-        <a class="rmore rlink" href="/recensioni/#rec-giulio-bonotto">Leggi la recensione completa</a><div class="vid-more"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div></div>
+        <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="vid-more"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div></div>
       </div><div class="vid-card rv" data-solo="m">
         <div class="vid" data-vid style="background-image:url(/assets/b34864964649.webp)">
           <video playsinline preload="none" poster="/assets/b34864964649.webp"><source src="/assets/30ecc6128c64.mp4" type="video/mp4"></video>
@@ -2759,18 +2794,18 @@ body.desk #video .vid-r .vid-more{margin-top:40px!important;justify-content:flex
           <div class="cap"><b>Giulio Bonotto racconta com'è lavorare con me</b></div>
         </div>
         <blockquote>«Collaborare con Fabio non significa semplicemente affidargli dei progetti da eseguire, significa <em>trovare un professionista con cui confrontarsi</em>, a cui poter comunicare i propri obiettivi e che si impegna concretamente per aiutare a raggiungerli.»</blockquote>
-        <a class="rmore rlink" href="/recensioni/#rec-giulio-bonotto">Leggi la recensione completa</a><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div>
+        <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div>
       </div><div class="vid-more rv" data-solo="m"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div>
     </section>
     <section class="sec grid-bg edge" id="chi" style="padding-top:20px" data-mattrs="{&quot;style&quot;: null}">
       <div class="sec-head rv"><span class="lbl"><i></i>Chi sono</span><h2>Un solo referente. <span class="o">Meno passaggi, più responsabilità.</span></h2></div>
       <div class="chi-vis rv" data-mattrs="{&quot;class&quot;: &quot;me-photo rv&quot;, &quot;style&quot;: &quot;background-image:url(/assets/22b3ab04a441.webp)&quot;}"><div class="visual" data-solo="d"><div class="shapes back" aria-hidden="true"><span class="sh orange t-big"></span><span class="sh orange t-small"></span><span class="sh orange sq"></span><span class="sh ink"></span></div><div class="photo-wrap"><img class="photo" src="/assets/89f87cc25d9a.webp" alt="Fabio Fregoni"></div></div>
-      <figure class="review chi-rev" data-solo="d"><span class="q" aria-hidden="true">“</span><blockquote>Continuiamo a collaborare con lui perché il suo contributo è diventato <em>strategico per la crescita</em> della nostra attività.</blockquote><a class="rmore rlink" href="/recensioni/#rec-riccardo-sirello">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/6678bcfd80ed.jpg" alt=""></span><span><b>Riccardo Sirello</b><small>Sito web e SEO · LinkedIn</small></span></figcaption></figure><span class="badge" data-solo="m"><span><b>18</b>anni di<br>progetti</span></span><div class="tagline" data-solo="m"><span class="lbl">Web designer · Brescia</span><b>Ciao, sono Fabio.</b></div></div>
+      <figure class="review chi-rev" data-solo="d"><span class="q" aria-hidden="true">“</span><blockquote>Continuiamo a collaborare con lui perché il suo contributo è diventato <em>strategico per la crescita</em> della nostra attività.</blockquote><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/6678bcfd80ed.jpg" alt=""></span><span><b>Riccardo Sirello</b><small>Sito web e SEO · LinkedIn</small></span></figcaption></figure><span class="badge" data-solo="m"><span><b>18</b>anni di<br>progetti</span></span><div class="tagline" data-solo="m"><span class="lbl">Web designer · Brescia</span><b>Ciao, sono Fabio.</b></div></div>
       <p class="me-txt rv">Da 18 anni progetto siti, brand e materiali per aziende e professionisti, online e su carta.</p>
       <p class="me-txt rv">Lavori direttamente con me: chi analizza il problema è chi progetta la soluzione e chi ti risponde al telefono.</p>
       <div class="stats" data-io><div><b data-count="18">0</b><span>Anni</span></div><div><b data-count="500" data-suffix="+">0</b><span>Progetti</span></div><div><b data-count="1">0</b><span>Referente</span></div></div>
       
-      <a class="pill pill-d rv" href="/chi-sono/" data-solo="d">La mia storia <span>→</span></a><div class="mini rv" data-solo="m"><q>Continuiamo a collaborare con lui perché il suo contributo è diventato strategico per la crescita della nostra attività.</q><a class="rmore rlink" href="/recensioni/#rec-riccardo-sirello">Leggi la recensione completa</a><div class="by"><span class="av"><img src="/assets/6678bcfd80ed.jpg" alt=""></span>Riccardo Sirello<a href="https://www.linkedin.com/in/fabiofregoni/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+      <a class="pill pill-d rv" href="/chi-sono/" data-solo="d">La mia storia <span>→</span></a><div class="mini rv" data-solo="m"><q>Continuiamo a collaborare con lui perché il suo contributo è diventato strategico per la crescita della nostra attività.</q><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="by"><span class="av"><img src="/assets/6678bcfd80ed.jpg" alt=""></span>Riccardo Sirello<a href="https://www.linkedin.com/in/fabiofregoni/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
     <a class="pill pill-o rv" href="/chi-sono/" data-solo="m">La mia storia <span>→</span></a></section>
     <section class="hs hs2 grid-bg edge" id="blog" data-mattrs="{&quot;class&quot;: &quot;sec grid-bg edge&quot;}">
       <div class="hs-pin" data-mattrs="{&quot;class&quot;: &quot;sec-head rv&quot;}"><div class="sec-head" data-solo="d"><span class="lbl"><i></i>Dal blog</span><h2>Idee per farti <span class="o">riconoscere.</span></h2><p>Colori, font, layout e posizionamento: gli errori che vedo più spesso.</p></div><div class="track" data-track2 data-posts data-solo="d"><a class="post" href="/blog/nero-puro/"><div class="cover c1"><span class="tri"></span><span class="big">Nero<br><em>puro?</em></span></div><span class="meta"><b>Colore</b> · 5 min</span><h3>Smetti di usare il nero puro nel tuo sito web: cosa usare al suo posto</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c3"><span class="ln"><i></i><i></i><i></i></span><span class="big">Testo<br>centrato</span></div><span class="meta"><b>Tipografia</b> · 4 min</span><h3>Non allineare il testo al centro: perché le persone smettono di leggere</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c2"><span class="tri"></span><span class="big">Font<br>a caso</span></div><span class="meta"><b>Tipografia</b> · 6 min</span><h3>Smetti di usare i font a caso: come sceglierne due che funzionano</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c1"><span class="sqr"></span><span class="big">Logo<br><em>≠ brand</em></span></div><span class="meta"><b>Brand</b> · 5 min</span><h3>[Il logo non è il tuo brand: cosa serve davvero per farti riconoscere]</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c3"><span class="ln"><i></i><i></i><i></i></span><span class="big">Troppo<br>pieno</span></div><span class="meta"><b>Layout</b> · 4 min</span><h3>[Troppe cose in home page: perché chi arriva non sa dove cliccare]</h3></a><a class="case more post-more" href="/blog/"><b>Tutti gli articoli</b><span>Leggili tutti →</span></a></div><div class="hs-bar" data-solo="d"><i></i></div><div class="hs-cta" data-solo="d"><a class="pill pill-o" href="/blog/">Tutti gli articoli <span>→</span></a></div><span class="lbl" data-solo="m"><i></i>Dal blog</span><h2 data-solo="m">Idee per farti <span class="o">riconoscere.</span></h2>
@@ -3092,7 +3127,7 @@ window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.ad
           <figure class="review rv in">
             <span class="q" aria-hidden="true">“</span>
             <blockquote>Con Fabio si può parlare di business. Non si limita alla grafica: <em>ragiona, porta idee, fa domande giuste.</em></blockquote>
-            <a class="rmore rlink" href="/recensioni/#rec-ana-strainu">Leggi la recensione completa</a><figcaption class="who">
+            <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who">
               <span class="av" aria-hidden="true"><img src="/assets/ab3b735aadd5.jpg" alt=""></span>
               <span><b>Ana Strainu</b><small>Collaborazioni e progetti</small></span>
             </figcaption>
@@ -3171,7 +3206,7 @@ window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.ad
           <div class="cap"><b>Giulio Bonotto racconta com'è lavorare con me</b></div>
         </div>
         <div class="vid-r"><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div><blockquote>«Collaborare con Fabio non significa semplicemente affidargli dei progetti da eseguire, significa <em>trovare un professionista con cui confrontarsi</em>, a cui poter comunicare i propri obiettivi e che si impegna concretamente per aiutare a raggiungerli.»</blockquote>
-        <a class="rmore rlink" href="/recensioni/#rec-giulio-bonotto">Leggi la recensione completa</a><div class="vid-more"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div></div>
+        <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="vid-more"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div></div>
       </div><div class="vid-card rv" data-solo="m">
         <div class="vid" data-vid style="background-image:url(/assets/b34864964649.webp)">
           <video playsinline preload="none" poster="/assets/b34864964649.webp"><source src="/assets/30ecc6128c64.mp4" type="video/mp4"></video>
@@ -3180,18 +3215,18 @@ window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.ad
           <div class="cap"><b>Giulio Bonotto racconta com'è lavorare con me</b></div>
         </div>
         <blockquote>«Collaborare con Fabio non significa semplicemente affidargli dei progetti da eseguire, significa <em>trovare un professionista con cui confrontarsi</em>, a cui poter comunicare i propri obiettivi e che si impegna concretamente per aiutare a raggiungerli.»</blockquote>
-        <a class="rmore rlink" href="/recensioni/#rec-giulio-bonotto">Leggi la recensione completa</a><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div>
+        <a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="who"><img src="/assets/6133a5a89c54.jpg" alt=""><span><b>Giulio Bonotto</b><small>LinkedIn</small></span></div>
       </div><div class="vid-more rv" data-solo="m"><a class="pill pill-o" href="/recensioni/">Tutte le recensioni <span>→</span></a></div>
     </section>
     <section class="sec grid-bg edge" id="chi" style="padding-top:20px" data-mattrs="{&quot;style&quot;: null}">
       <div class="sec-head rv"><span class="lbl"><i></i>Chi sono</span><h2>Un solo referente. <span class="o">Meno passaggi, più responsabilità.</span></h2></div>
       <div class="chi-vis rv" data-mattrs="{&quot;class&quot;: &quot;me-photo rv&quot;, &quot;style&quot;: &quot;background-image:url(/assets/22b3ab04a441.webp)&quot;}"><div class="visual" data-solo="d"><div class="shapes back" aria-hidden="true"><span class="sh orange t-big"></span><span class="sh orange t-small"></span><span class="sh orange sq"></span><span class="sh ink"></span></div><div class="photo-wrap"><img class="photo" src="/assets/89f87cc25d9a.webp" alt="Fabio Fregoni"></div></div>
-      <figure class="review chi-rev" data-solo="d"><span class="q" aria-hidden="true">“</span><blockquote>Continuiamo a collaborare con lui perché il suo contributo è diventato <em>strategico per la crescita</em> della nostra attività.</blockquote><a class="rmore rlink" href="/recensioni/#rec-riccardo-sirello">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/6678bcfd80ed.jpg" alt=""></span><span><b>Riccardo Sirello</b><small>Sito web e SEO · LinkedIn</small></span></figcaption></figure><span class="badge" data-solo="m"><span><b>18</b>anni di<br>progetti</span></span><div class="tagline" data-solo="m"><span class="lbl">Web designer · Brescia</span><b>Ciao, sono Fabio.</b></div></div>
+      <figure class="review chi-rev" data-solo="d"><span class="q" aria-hidden="true">“</span><blockquote>Continuiamo a collaborare con lui perché il suo contributo è diventato <em>strategico per la crescita</em> della nostra attività.</blockquote><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/6678bcfd80ed.jpg" alt=""></span><span><b>Riccardo Sirello</b><small>Sito web e SEO · LinkedIn</small></span></figcaption></figure><span class="badge" data-solo="m"><span><b>18</b>anni di<br>progetti</span></span><div class="tagline" data-solo="m"><span class="lbl">Web designer · Brescia</span><b>Ciao, sono Fabio.</b></div></div>
       <p class="me-txt rv">Da 18 anni progetto siti, brand e materiali per aziende e professionisti, online e su carta.</p>
       <p class="me-txt rv">Lavori direttamente con me: chi analizza il problema è chi progetta la soluzione e chi ti risponde al telefono.</p>
       <div class="stats" data-io><div><b data-count="18">0</b><span>Anni</span></div><div><b data-count="500" data-suffix="+">0</b><span>Progetti</span></div><div><b data-count="1">0</b><span>Referente</span></div></div>
       
-      <a class="pill pill-d rv" href="/chi-sono/" data-solo="d">La mia storia <span>→</span></a><div class="mini rv" data-solo="m"><q>Continuiamo a collaborare con lui perché il suo contributo è diventato strategico per la crescita della nostra attività.</q><a class="rmore rlink" href="/recensioni/#rec-riccardo-sirello">Leggi la recensione completa</a><div class="by"><span class="av"><img src="/assets/6678bcfd80ed.jpg" alt=""></span>Riccardo Sirello<a href="https://www.linkedin.com/in/fabiofregoni/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+      <a class="pill pill-d rv" href="/chi-sono/" data-solo="d">La mia storia <span>→</span></a><div class="mini rv" data-solo="m"><q>Continuiamo a collaborare con lui perché il suo contributo è diventato strategico per la crescita della nostra attività.</q><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><div class="by"><span class="av"><img src="/assets/6678bcfd80ed.jpg" alt=""></span>Riccardo Sirello<a href="https://www.linkedin.com/in/fabiofregoni/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
     <a class="pill pill-o rv" href="/chi-sono/" data-solo="m">La mia storia <span>→</span></a></section>
     <section class="hs hs2 grid-bg edge" id="blog" data-mattrs="{&quot;class&quot;: &quot;sec grid-bg edge&quot;}">
       <div class="hs-pin" data-mattrs="{&quot;class&quot;: &quot;sec-head rv&quot;}"><div class="sec-head" data-solo="d"><span class="lbl"><i></i>Dal blog</span><h2>Idee per farti <span class="o">riconoscere.</span></h2><p>Colori, font, layout e posizionamento: gli errori che vedo più spesso.</p></div><div class="track" data-track2 data-posts data-solo="d"><a class="post" href="/blog/nero-puro/"><div class="cover c1"><span class="tri"></span><span class="big">Nero<br><em>puro?</em></span></div><span class="meta"><b>Colore</b> · 5 min</span><h3>Smetti di usare il nero puro nel tuo sito web: cosa usare al suo posto</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c3"><span class="ln"><i></i><i></i><i></i></span><span class="big">Testo<br>centrato</span></div><span class="meta"><b>Tipografia</b> · 4 min</span><h3>Non allineare il testo al centro: perché le persone smettono di leggere</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c2"><span class="tri"></span><span class="big">Font<br>a caso</span></div><span class="meta"><b>Tipografia</b> · 6 min</span><h3>Smetti di usare i font a caso: come sceglierne due che funzionano</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c1"><span class="sqr"></span><span class="big">Logo<br><em>≠ brand</em></span></div><span class="meta"><b>Brand</b> · 5 min</span><h3>[Il logo non è il tuo brand: cosa serve davvero per farti riconoscere]</h3></a><a class="post" href="/blog/nero-puro/"><div class="cover c3"><span class="ln"><i></i><i></i><i></i></span><span class="big">Troppo<br>pieno</span></div><span class="meta"><b>Layout</b> · 4 min</span><h3>[Troppe cose in home page: perché chi arriva non sa dove cliccare]</h3></a><a class="case more post-more" href="/blog/"><b>Tutti gli articoli</b><span>Leggili tutti →</span></a></div><div class="hs-bar" data-solo="d"><i></i></div><div class="hs-cta" data-solo="d"><a class="pill pill-o" href="/blog/">Tutti gli articoli <span>→</span></a></div><span class="lbl" data-solo="m"><i></i>Dal blog</span><h2 data-solo="m">Idee per farti <span class="o">riconoscere.</span></h2>
@@ -3479,4 +3514,4 @@ if(box){
   else if(scelta!=='no')setTimeout(apri,600);
 }
 })();
-</script> </body> </html>
+</script>  </body> </html>

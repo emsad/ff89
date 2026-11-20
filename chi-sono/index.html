@@ -1109,6 +1109,9 @@ p,li,blockquote,.lead,figcaption,small{text-wrap:pretty}
 .lm-sl img{width:100%;height:100%;object-fit:cover;display:block}
 .lm-in{position:absolute;left:50%;top:50%;translate:-50% -50%;width:68px;height:68px;border-radius:20px;background:#0a66c2;color:#fff;display:grid;place-items:center;font:800 34px/1 var(--head);box-shadow:0 20px 40px #0a66c266;rotate:3deg;z-index:2}
 @media (prefers-reduced-motion:reduce){.lm-track{animation:none}}
+/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
 
 }
 @media (min-width:861px){
@@ -4090,6 +4093,27 @@ body.desk.pg-blog .bl-list{overflow:visible!important}
 .dnav .dd-p.ddx a.ddx-c:hover b{color:#fff!important}
 .dnav .ddx-s>a:not(.dd-all){background:#ffffff0d!important;border:1px solid #ffffff1a;border-radius:16px!important;padding:12px 14px!important}
 }
+
+/*DDX-2 · 20 nov: solo servizi 3x2, immagini centrate, hover sobrio*/
+@media (min-width:861px){
+.dnav .dd-p.ddx{width:min(1080px,calc(100vw - 2*var(--pad)));grid-template-columns:minmax(0,1fr);padding:14px}
+.ddx-g{gap:12px}
+.dnav .dd-p.ddx a.ddx-c{padding:10px 10px 18px!important;background:#f6f7f9!important;transition:opacity .35s,transform .35s var(--ease),background .25s,box-shadow .25s}
+.dnav .dd:hover .dd-p.ddx a.ddx-c,.dnav .dd:focus-within .dd-p.ddx a.ddx-c{transition-delay:calc(var(--i)*30ms),calc(var(--i)*30ms),0s,0s}
+.dnav .dd-p.ddx .ddx-im{display:flex!important;align-items:center;justify-content:center;height:190px;border-radius:14px;background:radial-gradient(70% 80% at 50% 60%,#ff751826,#ff751800 70%),#fff!important;transition:none}
+.dnav .dd-p.ddx .ddx-im img{display:block;width:auto;height:auto;max-height:172px;max-width:90%;margin:0 auto;object-fit:contain;transform:none;transition:transform .45s var(--ease)}
+.dnav .dd-p.ddx .ddx-t{padding:14px 8px 0}
+.dnav .dd-p.ddx .ddx-t b{font-size:17px!important}
+.dnav .dd-p.ddx .ddx-t span{font-size:13.5px;line-height:18px}
+.dnav .dd-p.ddx a.ddx-c:hover{background:#fff!important;color:var(--ink)!important;box-shadow:0 14px 34px #0d0f141a,inset 0 0 0 1px #0d0f140f}
+.dnav .dd-p.ddx a.ddx-c:hover b{color:var(--ink)!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-t span{color:var(--ink-2)}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im{background:radial-gradient(70% 80% at 50% 60%,#ff751833,#ff751800 70%),#fff!important}
+.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:scale(1.04)}
+.dnav .dd-p.ddx .ddx-c>i{background:#fff}
+.dnav .dd-p.ddx a.ddx-c:hover>i{background:var(--grad);color:#fff;transform:translateX(2px)}
+@media (prefers-reduced-motion:reduce){.dnav .dd-p.ddx .ddx-im img{transition:none}.dnav .dd-p.ddx a.ddx-c:hover .ddx-im img{transform:none}}
+}
 /*NAV-NARROW*/
 @media (min-width:861px) and (max-width:1240px){
 .dnav{gap:12px!important}
@@ -4108,13 +4132,22 @@ body.desk.pg-blog .bl-list{overflow:visible!important}
 @media (min-width:861px) and (max-width:980px){.desk section:not(.hero) .sec-head h2{zoom:.76}}
 @media (min-width:981px) and (max-width:1080px){.desk section:not(.hero) .sec-head h2{zoom:.84}}
 @media (min-width:1081px) and (max-width:1180px){.desk section:not(.hero) .sec-head h2{zoom:.92}}
+/*RITOCCHI-GLOBALI · 20 nov*/
+/* scritta "Fuori Template" nel footer: con la spaziatura negativa l'ultima lettera usciva dal riquadro del colore sfumato */
+.marq span{padding-right:.08em;margin-right:-.08em}
+/*RITOCCHI-CHI · 20 nov: card "La storia", hover morbido invece dello scatto*/
+@media (min-width:861px){
+body.desk.pg-chi-sono section.ch-story>.step{transition:rotate .6s cubic-bezier(.2,.8,.2,1),translate .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s cubic-bezier(.2,.8,.2,1)!important;will-change:rotate,translate}
+body.desk.pg-chi-sono section.ch-story>.step:hover{rotate:0deg;translate:0 -6px!important;box-shadow:0 30px 60px #0d0f1426}
+}
+@media (prefers-reduced-motion:reduce){body.desk.pg-chi-sono section.ch-story>.step{transition:none!important}}
 
 }
 </style></head> <body class="pg-chi-sono"> <div id="v-d">
 <div class="wrap">
 <div class="phone">
   <div class="scrim" data-scrim></div>
-  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div><div class="dd-s ddx-s"><small>Settori</small><a href="/settori/manifattura/"><b>Manifattura e B2B</b><span>Siti e comunicazione per chi produce</span></a><div class="ddx-help"><b>Non sai da dove partire?</b><span>Raccontami cosa non funziona: ti dico io da dove iniziare.</span><a href="/contatti/" class="ddx-cta">Raccontami il progetto <span>→</span></a></div><a href="/servizi/" class="dd-all">Tutti i servizi <span>→</span></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/">Casi studio</a><a href="/chi-sono/" aria-current="page">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="/contatti/">Raccontami il progetto <span>→</span></a></div>
+  <div class="dnav"><nav aria-label="Navigazione principale"><a href="/" class="nv-home">Home</a><div class="dd"><a href="/servizi/" class="dd-t" aria-haspopup="true">Servizi <i aria-hidden="true">▾</i></a><div class="dd-p ddx"><div class="ddx-g"><a href="/servizi/siti-web/" class="ddx-c" style="--i:0"><span class="ddx-im"><img src="/assets/69f8de15dec1.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Siti web</b><span>Su misura, per farti scegliere</span></span><i aria-hidden="true">→</i></a><a href="/servizi/landing-page/" class="ddx-c" style="--i:1"><span class="ddx-im"><img src="/assets/a0c77536780f.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Landing e acquisizione</b><span>Pagine e campagne che portano contatti</span></span><i aria-hidden="true">→</i></a><a href="/servizi/ecommerce/" class="ddx-c" style="--i:2"><span class="ddx-im"><img src="/assets/3c37087fa830.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>E-commerce Shopify</b><span>Negozi che vendono, non solo vetrine</span></span><i aria-hidden="true">→</i></a><a href="/servizi/profilo-linkedin/" class="ddx-c" style="--i:3"><span class="ddx-im"><img src="/assets/0e8b0926f1b4.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Profilo LinkedIn</b><span>Il profilo che lavora per te</span></span><i aria-hidden="true">→</i></a><a href="/servizi/consulenza-brand/" class="ddx-c" style="--i:4"><span class="ddx-im"><img src="/assets/c7edbdb9993e.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Consulenza brand</b><span>Cosa ti rende diverso, detto bene</span></span><i aria-hidden="true">→</i></a><a href="/servizi/direzione-artistica/" class="ddx-c" style="--i:5"><span class="ddx-im"><img src="/assets/2d069706c38c.webp" alt="" loading="lazy"></span><span class="ddx-t"><b>Direzione artistica</b><span>Un’immagine coerente ovunque</span></span><i aria-hidden="true">→</i></a></div></div></div><a href="/metodo/">Metodo</a><a href="/casi-studio/">Casi studio</a><a href="/chi-sono/" aria-current="page">Chi sono</a><a href="/blog/">Blog</a><a href="/contatti/">Contatti</a></nav><a class="cta" href="/contatti/">Raccontami il progetto <span>→</span></a></div>
   <div class="mega" data-mega>
     <button class="mega-toggle" type="button" data-mega-toggle aria-expanded="false" aria-label="Apri menu">
       <span class="lbl-open">Menu</span><span class="lbl-close">Chiudi</span>
@@ -4193,7 +4226,7 @@ body.desk.pg-blog .bl-list{overflow:visible!important}
     <section style="z-index:86" class="sec grid-bg edge ch-val" id="valori">
       <div class="sec-head rv"><span class="lbl"><i></i>Valori</span><h2>Cosa puoi aspettarti. <span class="o">E cosa no.</span></h2></div>
       <div class="mods vmods"><div class="mod  rv"><div class="ic ic-bars" aria-hidden="true"><i class="w"></i><i class="w"></i><i class="w"></i></div><div><b>Parlo di business, non solo di grafica.</b><span>Prima di disegnare voglio capire come vendi.</span></div></div><div class="mod dk rv"><div class="ic ic-call" aria-hidden="true"><i class="w"></i><i class="w"></i></div><div><b>Rispondo io, sempre.</b><span>Niente account manager, niente passaggi di mano.</span></div></div><div class="mod og rv"><div class="ic ic-shield" aria-hidden="true"><i class="w"></i><b></b></div><div><b>Non invento numeri.</b><span>Né nei tuoi materiali, né nei miei casi studio.</span></div></div><div class="mod  rv"><div class="ic ic-tag" aria-hidden="true"><i class="w"></i><b></b></div><div><b>Non ti vendo quello che non serve.</b><span>Se basta una landing, non ti propongo un sito.</span></div></div><div class="mod og rv"><div class="ic ic-spark" aria-hidden="true"><i class="w"></i><b></b></div><div><b>L'AI è uno strumento, non una scorciatoia.</b><span>La uso per lavorare meglio, non per farti un sito uguale a tutti.</span></div></div></div>
-      <figure class="review rv ch-rev"><span class="q" aria-hidden="true">“</span><blockquote>Si è fatto notare per la capacità di ascolto e la gestione puntuale delle consegne, e per <em>idee fuori dagli schemi</em> che migliorano l’esperienza utente.</blockquote><a class="rmore rlink" href="/recensioni/#rec-fabio-erbi">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/2907367ff1e1.jpg" alt=""></span><span><b>Fabio Erbì</b><small>Sito CreditriX · LinkedIn</small></span></figcaption></figure>
+      <figure class="review rv ch-rev"><span class="q" aria-hidden="true">“</span><blockquote>Si è fatto notare per la capacità di ascolto e la gestione puntuale delle consegne, e per <em>idee fuori dagli schemi</em> che migliorano l’esperienza utente.</blockquote><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/2907367ff1e1.jpg" alt=""></span><span><b>Fabio Erbì</b><small>Sito CreditriX · LinkedIn</small></span></figcaption></figure>
     </section>
 
     
@@ -4454,7 +4487,7 @@ window.addEventListener('load',function(){setTimeout(run,200)});var rt;window.ad
     <section style="z-index:86" class="sec grid-bg edge ch-val" id="valori">
       <div class="sec-head rv"><span class="lbl"><i></i>Valori</span><h2>Cosa puoi aspettarti. <span class="o">E cosa no.</span></h2></div>
       <div class="mods vmods"><div class="mod  rv"><div class="ic ic-bars" aria-hidden="true"><i class="w"></i><i class="w"></i><i class="w"></i></div><div><b>Parlo di business, non solo di grafica.</b><span>Prima di disegnare voglio capire come vendi.</span></div></div><div class="mod dk rv"><div class="ic ic-call" aria-hidden="true"><i class="w"></i><i class="w"></i></div><div><b>Rispondo io, sempre.</b><span>Niente account manager, niente passaggi di mano.</span></div></div><div class="mod og rv"><div class="ic ic-shield" aria-hidden="true"><i class="w"></i><b></b></div><div><b>Non invento numeri.</b><span>Né nei tuoi materiali, né nei miei casi studio.</span></div></div><div class="mod  rv"><div class="ic ic-tag" aria-hidden="true"><i class="w"></i><b></b></div><div><b>Non ti vendo quello che non serve.</b><span>Se basta una landing, non ti propongo un sito.</span></div></div><div class="mod og rv"><div class="ic ic-spark" aria-hidden="true"><i class="w"></i><b></b></div><div><b>L'AI è uno strumento, non una scorciatoia.</b><span>La uso per lavorare meglio, non per farti un sito uguale a tutti.</span></div></div></div>
-      <figure class="review rv ch-rev"><span class="q" aria-hidden="true">“</span><blockquote>Si è fatto notare per la capacità di ascolto e la gestione puntuale delle consegne, e per <em>idee fuori dagli schemi</em> che migliorano l’esperienza utente.</blockquote><a class="rmore rlink" href="/recensioni/#rec-fabio-erbi">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/2907367ff1e1.jpg" alt=""></span><span><b>Fabio Erbì</b><small>Sito CreditriX · LinkedIn</small></span></figcaption></figure>
+      <figure class="review rv ch-rev"><span class="q" aria-hidden="true">“</span><blockquote>Si è fatto notare per la capacità di ascolto e la gestione puntuale delle consegne, e per <em>idee fuori dagli schemi</em> che migliorano l’esperienza utente.</blockquote><a class="rmore rlink" href="/recensioni/">Leggi la recensione completa</a><figcaption class="who"><span class="av" aria-hidden="true"><img src="/assets/2907367ff1e1.jpg" alt=""></span><span><b>Fabio Erbì</b><small>Sito CreditriX · LinkedIn</small></span></figcaption></figure>
     </section>
 
     
@@ -4595,4 +4628,4 @@ if(box){
   else if(scelta!=='no')setTimeout(apri,600);
 }
 })();
-</script> </body> </html>
+</script>  </body> </html>
