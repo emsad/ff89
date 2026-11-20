@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /grazie/
+Disallow: /invia.php
+
+Sitemap: https://fabiofregoni.com/sitemap.xml
