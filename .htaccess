@@ -1,0 +1,10 @@
+# Cartella del sito (ff-sito su fabiofregoni.com, e nuovo.fabiofregoni.com)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# nuovo.fabiofregoni.com era l'anteprima: ora porta al dominio principale
+RewriteCond %{HTTP_HOST} ^nuovo\.fabiofregoni\.com$ [NC]
+RewriteRule ^(.*)$ https://fabiofregoni.com/$1 [R=301,L]
+# chi apre /ff-sito/ direttamente viene riportato all'indirizzo pulito
+RewriteCond %{THE_REQUEST} \s/ff-sito/([^\s?]*)
+RewriteRule ^ /%1 [R=301,L]
+</IfModule>
