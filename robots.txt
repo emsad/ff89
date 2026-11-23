@@ -4,3 +4,5 @@ Disallow: /grazie/
 Disallow: /invia.php
 
 Sitemap: https://fabiofregoni.com/sitemap.xml
+
+# Guida al sito per gli assistenti AI: https://fabiofregoni.com/llms.txt
