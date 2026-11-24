@@ -8,3 +8,5 @@ RewriteRule ^(.*)$ https://fabiofregoni.com/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} \s/ff-sito/([^\s?]*)
 RewriteRule ^ /%1 [R=301,L]
 </IfModule>
+
+AddType text/vtt .vtt
