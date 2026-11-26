@@ -389,7 +389,7 @@ document.querySelectorAll('.phone').forEach(phone=>{
   onScroll();
 
   // form a passi
-  const form=sc.querySelector('[data-form]'),steps=[...form.querySelectorAll('[data-step]')],next=form.querySelector('[data-next]'),back=form.querySelector('[data-back]'),bar=form.querySelector('[data-bar]'),lbl=form.querySelector('[data-steplbl]'),done=form.querySelector('[data-done]');
+  if(sc.querySelector('[data-form]')){const form=sc.querySelector('[data-form]'),steps=[...form.querySelectorAll('[data-step]')],next=form.querySelector('[data-next]'),back=form.querySelector('[data-back]'),bar=form.querySelector('[data-bar]'),lbl=form.querySelector('[data-steplbl]'),done=form.querySelector('[data-done]');
   let cur=0;
   const show=i=>{steps.forEach((s,k)=>s.classList.toggle('on',k===i));back.hidden=i===0;bar.style.width=((i+1)/steps.length*100)+'%';lbl.textContent='Passo '+(i+1)+' di '+steps.length;next.innerHTML=(i===steps.length-1?'Invia la richiesta':'Continua')+' <span>→</span>'};
   const valid=st=>{let ok=true;st.querySelectorAll('[required]').forEach(inp=>{const box=inp.closest('div,label');let v;
@@ -397,7 +397,7 @@ document.querySelectorAll('.phone').forEach(phone=>{
       if(box)box.classList.toggle('err',!v);if(!v)ok=false});return ok};
   form.addEventListener('submit',e=>{e.preventDefault();if(!valid(steps[cur]))return;
     if(cur<steps.length-1){cur++;show(cur)}else{steps.forEach(s=>s.classList.remove('on'));form.querySelector('.fnav').style.display='none';form.querySelector('.prog').style.display='none';done.classList.add('on');window.ffInvia(form,done)}});
-  back.addEventListener('click',()=>{if(cur>0){cur--;show(cur)}});
+  back.addEventListener('click',()=>{if(cur>0){cur--;show(cur)}});}
 
   // link interni e torna su
   const go=t=>{const el=sc.querySelector(t);if(el)sc.scrollTo({top:el.offsetTop-70,behavior:reduce?'auto':'smooth'})};
@@ -825,7 +825,7 @@ document.querySelectorAll('.phone').forEach(phone=>{
   onScroll();
 
   // form a passi
-  const form=sc.querySelector('[data-form]'),steps=[...form.querySelectorAll('[data-step]')],next=form.querySelector('[data-next]'),back=form.querySelector('[data-back]'),bar=form.querySelector('[data-bar]'),lbl=form.querySelector('[data-steplbl]'),done=form.querySelector('[data-done]');
+  if(sc.querySelector('[data-form]')){const form=sc.querySelector('[data-form]'),steps=[...form.querySelectorAll('[data-step]')],next=form.querySelector('[data-next]'),back=form.querySelector('[data-back]'),bar=form.querySelector('[data-bar]'),lbl=form.querySelector('[data-steplbl]'),done=form.querySelector('[data-done]');
   let cur=0;
   const show=i=>{steps.forEach((s,k)=>s.classList.toggle('on',k===i));back.hidden=i===0;bar.style.width=((i+1)/steps.length*100)+'%';lbl.textContent='Passo '+(i+1)+' di '+steps.length;next.innerHTML=(i===steps.length-1?'Invia la richiesta':'Continua')+' <span>→</span>'};
   const valid=st=>{let ok=true;st.querySelectorAll('[required]').forEach(inp=>{const box=inp.closest('div,label');let v;
@@ -833,7 +833,7 @@ document.querySelectorAll('.phone').forEach(phone=>{
       if(box)box.classList.toggle('err',!v);if(!v)ok=false});return ok};
   form.addEventListener('submit',e=>{e.preventDefault();if(!valid(steps[cur]))return;
     if(cur<steps.length-1){cur++;show(cur)}else{steps.forEach(s=>s.classList.remove('on'));form.querySelector('.fnav').style.display='none';form.querySelector('.prog').style.display='none';done.classList.add('on');window.ffInvia(form,done)}});
-  back.addEventListener('click',()=>{if(cur>0){cur--;show(cur)}});
+  back.addEventListener('click',()=>{if(cur>0){cur--;show(cur)}});}
 
   // link interni e torna su
   const go=t=>{const el=sc.querySelector(t);if(el)sc.scrollTo({top:el.offsetTop-70,behavior:reduce?'auto':'smooth'})};
