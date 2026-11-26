@@ -5,6 +5,7 @@
 header('Content-Type: application/json; charset=utf-8');
 header('X-Robots-Tag: noindex');
 date_default_timezone_set('Europe/Rome');
+require __DIR__ . '/posta-lib.php';
 
 const DESTINATARIO = 'info@fabiofregoni.com';
 const MITTENTE = 'info@fabiofregoni.com';
@@ -112,15 +113,8 @@ foreach ($righe as $k => $v) if ($v !== '' && $v !== null) { $md .= '**' . $k . 
 
 // Twenty
 function twenty($metodo, $percorso, $corpo) {
-    $cfg = null;
-    foreach ([preg_replace('~/public_html(/.*)?$~', '', __DIR__) . '/config-sito/twenty.php', preg_replace('~(/public_html)(/.*)?$~', '$1', __DIR__) . '/config-sito/twenty.php'] as $p) if (is_file($p)) { $cfg = @include($p); break; }
-    if ($cfg === null) { // crea il file vuoto da completare (fuori dalla cartella pubblica)
-        $p = preg_replace('~/public_html(/.*)?$~', '', __DIR__) . '/config-sito';
-        if (!is_dir($p)) @mkdir($p, 0750, true);
-        if (!is_file($p . '/twenty.php')) @file_put_contents($p . '/twenty.php', "<?php\n// Chiave API di Twenty per il modulo analisi gratuita.\n// Incolla la chiave al posto di INCOLLA_QUI_LA_CHIAVE, tra gli apici, e salva.\nreturn ['twenty_key' => 'INCOLLA_QUI_LA_CHIAVE'];\n");
-    }
-    $chiave = is_array($cfg) ? trim($cfg['twenty_key'] ?? '') : '';
-    if ($chiave === '' || $chiave === 'INCOLLA_QUI_LA_CHIAVE') return null;
+    $chiave = ff_valore('twenty_key');
+    if ($chiave === '') return null;
     $ch = curl_init(TWENTY_URL . '/rest/' . $percorso);
     curl_setopt_array($ch, [CURLOPT_CUSTOMREQUEST => $metodo, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 12,
         CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . $chiave, 'Content-Type: application/json'],
@@ -162,14 +156,7 @@ if ($fase === 'completa') {
     $testo = "Nuova richiesta di analisi gratuita\n\n" . $txt
         . ($id ? "\nScheda in Twenty: " . TWENTY_URL . "/object/richiestaAnalisi/" . $id . "\n" : "\n(Scheda Twenty non creata: controlla la chiave.)\n")
         . "\nRispondi a questa email per scrivere a " . $d['nome'] . ".\n";
-    $ogg = '=?UTF-8?B?' . base64_encode('Analisi gratuita: ' . $d['attivita'] . ' (' . $d['nome'] . ')') . '?=';
-    $nome = preg_replace('/[^\p{L}\p{N} .\'-]/u', '', $d['nome']);
-    $int = implode("\r\n", [
-        'From: =?UTF-8?B?' . base64_encode('Sito fabiofregoni.com') . '?= <' . MITTENTE . '>',
-        'Reply-To: =?UTF-8?B?' . base64_encode($nome) . '?= <' . $d['email'] . '>',
-        'MIME-Version: 1.0', 'Content-Type: text/plain; charset=UTF-8', 'Content-Transfer-Encoding: 8bit',
-    ]);
-    $inviata = @mail(DESTINATARIO, $ogg, $testo, $int, '-f' . MITTENTE);
+    $inviata = ff_invia_email(MITTENTE, DESTINATARIO, 'Analisi gratuita: ' . $d['attivita'] . ' (' . $d['nome'] . ')', $testo, [$d['nome'], $d['email']]);
     fine(['ok' => (bool)($inviata || $id)]);
 }
 fine(['ok' => true, 'token' => $token]);

@@ -5,6 +5,7 @@ header('Content-Type: application/json; charset=utf-8');
 header('X-Robots-Tag: noindex');
 
 date_default_timezone_set('Europe/Rome');
+require __DIR__ . '/posta-lib.php';
 const DESTINATARIO = 'info@fabiofregoni.com';
 const MITTENTE = 'info@fabiofregoni.com';
 
@@ -76,15 +77,5 @@ $testo = "Nuova richiesta dal sito fabiofregoni.com\n\n" . implode("\n", $righe)
 @file_put_contents($cartella . '/richieste.jsonl', json_encode(['data' => date('c'), 'pagina' => $pagina, 'url' => $url, 'utm' => $utm] + $dati, JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX);
 
 $oggetto = 'Nuova richiesta: ' . $dati['Nome'] . ($dati['Azienda'] ? ' (' . $dati['Azienda'] . ')' : '') . ($pagina ? ' · ' . $pagina : '');
-$oggetto = '=?UTF-8?B?' . base64_encode($oggetto) . '?=';
-$nome = preg_replace('/[^\p{L}\p{N} .\'-]/u', '', $dati['Nome']);
-$intestazioni = implode("\r\n", [
-    'From: =?UTF-8?B?' . base64_encode('Sito fabiofregoni.com') . '?= <' . MITTENTE . '>',
-    'Reply-To: =?UTF-8?B?' . base64_encode($nome) . '?= <' . $dati['Email'] . '>',
-    'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: 8bit',
-]);
-
-$inviata = @mail(DESTINATARIO, $oggetto, $testo, $intestazioni, '-f' . MITTENTE);
+$inviata = ff_invia_email(MITTENTE, DESTINATARIO, $oggetto, $testo, [$dati['Nome'], $dati['Email']]);
 fine((bool)$inviata, $inviata ? 200 : 500);
