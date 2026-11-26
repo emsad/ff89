@@ -25,6 +25,7 @@ function ff_valore($k) {
 
 // $da = indirizzo mittente (la casella), $a = destinatario, $rispondi = [nome, email] per il Reply-To
 function ff_invia_email($da, $a, $oggetto, $testo, $rispondi = null) {
+    $da = ff_valore('smtp_user') ?: 'report@fabiofregoni.com'; // casella dedicata agli invii automatici
     $ogg = '=?UTF-8?B?' . base64_encode($oggetto) . '?=';
     $int = [
         'From: =?UTF-8?B?' . base64_encode('Sito fabiofregoni.com') . '?= <' . $da . '>',
@@ -36,7 +37,7 @@ function ff_invia_email($da, $a, $oggetto, $testo, $rispondi = null) {
     $corpo = chunk_split(base64_encode($testo));
     $pw = ff_valore('smtp_password');
     if ($pw !== '' && ff_smtp($da, $pw, $a, $ogg, $int, $corpo)) return true;
-    return @mail($a, $ogg, $corpo, implode("\r\n", $int), '-f' . $da);
+    return @mail($a, $ogg, $corpo, str_replace('<' . $da . '>', '<info@fabiofregoni.com>', implode("\r\n", $int)), '-finfo@fabiofregoni.com');
 }
 
 function ff_smtp($utente, $pw, $a, $ogg, $int, $corpo) {
