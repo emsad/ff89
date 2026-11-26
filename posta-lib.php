@@ -54,7 +54,8 @@ function ff_smtp($utente, $pw, $a, $ogg, $int, $corpo) {
             'Date: ' . date('r'), 'To: <' . $a . '>', 'Subject: ' . $ogg,
             'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . $dom . '>',
         ], $int);
-        $msg = implode("\r\n", $head) . "\r\n\r\n" . str_replace("\n.", "\n..", str_replace("\r\n", "\n", $corpo));
+        $msg = implode("\n", $head) . "\n\n" . str_replace("\r\n", "\n", $corpo);
+        $msg = str_replace("\n.", "\n..", rtrim($msg, "\n"));
         $msg = str_replace("\n", "\r\n", $msg);
         $ok = $cmd($msg . "\r\n.", 250);
     }
